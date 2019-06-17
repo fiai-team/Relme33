@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="heigth_top_bar">60dp</dimen>
+
+    <dimen name="espaciado_entre_items_menu">6dp</dimen>
+
+    <dimen name="separcion_bordes_botones">12dp</dimen>
+
+    <dimen name="tamanno_top_bar">40dp</dimen>
+
+    <dimen name="tamnno_magen">180dp</dimen>
+
+    <dimen name="tamanno_image_largo">400dp</dimen>
+
+    <dimen name="separacion_acerca_de">80dp</dimen>
+
+    <dimen name="top_del_texto">14dp</dimen>
+
+    <dimen name="boton_app">60dp</dimen>
+
+    <dimen name="espaciado_cabecera">70dp</dimen>
+
+    <dimen name="altura_botones_conferencistas">50dp</dimen>
+
+    <dimen name="tamano_foto_persona">180dp</dimen>
+
+
+    <dimen name="separacion_dias_borde_derecho">100dp</dimen>
+
+    <dimen name="tamnno_texto_subtitulo">8dp</dimen>
+
+    <dimen name="text_20">20sp</dimen>
+    <dimen name="text_18">18sp</dimen>
+    <dimen name="tamanno_icono_contactos">50dp</dimen>
+
+    <dimen name="cajon_de_texto">16sp</dimen>
+
+    <dimen name="titulo_about_us">25sp</dimen>
+
+    <dimen name="acerca_de_los_autores">18sp</dimen>
+
+    <dimen name="boton_programa">20dp</dimen>
+
+    <dimen name="margin_start_text_hora">5dp</dimen>
+
+    <dimen name="tamanno_encabezados">25dp</dimen>
+
+    <dimen name="padin_top_10">10dp</dimen>
+    
+    <dimen name="tamanno_imagen_descripcion">200dp</dimen>
+    
+</resources>

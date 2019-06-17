@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">RELME 33</string>
+
+    <string name="subtitle">La Habana, 2019</string>
+    <string name="texto_relme_info">La Reunión Latinoamericana de Matemática Educativa (RELME) es un encuentro anual de investigadores, profesores y estudiantes de licenciatura o posgrado interesados en la matemática educativa, convocado por el Comité Latinoamericano de Matemática Educativa (Clame) y organizado en esta edición 33 por la Universidad de las Ciencias Informáticas (UCI), Cuba. Este evento promueve el desarrollo de la disciplina en la región a través de la presentación de investigaciones; el intercambio de experiencias y propuestas teóricas y metodológicas entre colegas dedicados a la enseñanza de la matemática; la interrelación entre instituciones y autoridades, compartiendo su visión desde diferentes culturas y tradiciones educativas.\n\n</string>
+    <string name="texto_persona_1">Nicado García es Doctora en Ciencias Matemáticas desde el año 1998 y profesora Titular desde el año 2005, además de Socio emérito y miembro de la Sociedad Cubana de Matemática y Computación (SCMC). Rectora de la Universidad de La Habana (UH), Cuba. Graduada de Licenciatura en Matemática  Aplicada en la Universidad Estatal de Odessa  en el año 1982. Ha ocupado diversas responsabilidades en  diferentes instituciones de educación  superior cubanas: profesora, Jefe de Departamento, Decana de la Facultad de Matemática, Física y Computación y  Vicerrectora Docente de la Universidad  Central de Las Villas. Por seis años Rectora de la Universidad de las Ciencias  Informáticas y en la actualidad Rectora de la Universidad de La Habana. Ha impartido docencia y conferencias en  las áreas de la matemática, la pedagogía y  las ciencias informáticas en universidades de México, Colombia, Chile, Venezuela, República Dominicana, Ecuador, Panamá y Brasil. Ha participado en múltiples eventos y conferencias científicas de carácter nacional e internacional en países de América Latina, Europa y Asia, al mismo tiempo que ha representado a Cuba en diferentes eventos y reuniones de organismos internacionales. Autora además de varias publicaciones en revistas científicas y tutora de estudiantes de pre y postgrado.\n\n</string>
+    <string name="texto_persona_2">Doctora en Ciencias en Matemática Educativa por el Instituto Politécnico Nacional, Maestra  en Ciencias con especialidad en Matemática  Educativa por el Centro de Investigación y de  Estudios Avanzados y Licenciada en Matemáticas Aplicadas y Computación por la Universidad Nacional Autónoma de México. Investigadora adjunta en el Departamento de Matemática Educativa del Centro de Investigación y de Estudios Avanzados del IPN, desde el 2014. Es Nivel I del Sistema Nacional de Investigadores del Conacyt, en México. Editora Asociada de la Revista Latinoamericana de Investigación en Matemática Educativa, y miembro activo del Comité Latinoamericano de Matemática Educativa y la Red de Centros de Investigación en Matemática Educativa en México. Actualmente trabaja en las líneas de generación y aplicación de conocimiento sobre “Construcción social de conocimiento matemático”, “Desarrollo profesional docente” y “Entornos tecnológicos de aprendizaje de las matemáticas”. Ha participado en diversos programas y espacios de desarrollo profesional docente, desde 2001, como tutora, diseñadora y coordinadora. Es autora de artículos científicos y de divulgación, de libros especializados y de texto, ha graduado y dirige tesistas de maestría y doctorado. Pertenece a comités de evaluación científica en revistas y publicaciones especializadas, congresos nacionales e internacionales, y para la evaluación de proyectos de investigación y posgrados nacionales. En este momento su grupo de investigación se encuentra desarrollando los proyectos: “Geometrización y Desarrollo del Razonamiento Espacial, en la práctica educativa en matemáticas. Un estudio desde la construcción social de conocimiento matemático” y “Construcción Social del Álgebra Simbólica. Un estudio sobre el desarrollo del pensamiento y el lenguaje algebraico”\n\n</string>
+    <string name="texto_persona_3">Doctorado en Didáctica de la Matemática Facultad de Ciencias de la Educación, Universidad de Granada, España Máster en Didáctica de la Matemática Facultad de Ciencias de la Educación.Universidad de Granada, España Licenciada en Enseñanza de la Matemática Facultad de Ciencias Exactas y Naturales y Centro de Investigación y Docencia en Educación. Universidad Nacional, Costa Rica. Licenciada en Ciencias de la Educación con énfasis en Didáctica de la Matemática Centro de Investigación y Docencia en Educación. Universidad Nacional, Costa Rica.\n\n</string>
+    <string name="texto_persona_4">En la actualidad es el director del Departamento de Didáctica de las CCEE, CCSS y de la Matemática de la Universidad de Valladolid. Ha dirigido diecinueve tesis doctorales y en la actualidad está orientando a otros doctorandos que tienen sus trabajos de tesis muy avanzados. Ha participado en numerosos tribunales de tesis doctorales y en otros de provisión de plazas de profesores titulares y catedráticos de Universidad. Tiene escritos más de 150 ensayos y trabajos de investigación entre capítulos de libro, libros y artículos en revistas, todos ellos sobre Educación Matemática. Ha arbitrado numerosos trabajos de investigación para revistas y para congresos de Didáctica de la Matemática. Ha impartido numerosas conferencias en congresos e instituciones así como numerosos seminarios de investigación en varias universidades.\n\n</string>
+
+    <string-array name="dias_del_relme">
+        <item>Domingo 7</item>
+        <item>Lunes 8</item>
+        <item>Martes 9</item>
+        <item>Miércoles 10</item>
+        <item>Jueves 11</item>
+        <item>Viernes 12</item>
+    </string-array>
+    <string name="cancel">Cerrar</string>
+    <string name="texto_descripcion_eventos">Encuentro Jueventud CLAME\n___________\nRegistro de Participantes y entrega de materiales\n___________\nConferencias Especiales\n___________\nCoffe break\n___________\nTalleres\n___________\nCursos cortos\n___________\nAlmuerzo\n___________\nInauguración\n___________\nConferencia Magistral (1)\n___________\nConferencia MAgistral (2)\n___________\nConferencia Magistral (3)\n___________\nConferencia Magistral (4)\n___________\nCoctel de bienvenida\n___________\nReportes de investigación\n___________\nComunicaciones breves\n___________\nGrupos de discusión\n___________\nReunión dedelegaciones\n___________\nGala Cultural(Teatro Karl Marx)\n___________\nCarteles, videos, fotrografía, presentación de libros y materiales didácticos\n___________\nReunión de miembros de CLAME\n___________\nMesa Redonda\n___________\nClausura\n___________\nCena de despedida\n___________\nExcursiones\n___________\n\n\n</string>
+    <string name="numero_contacto">+5378358265</string>
+    <string name="coreo">relme33@uci.cu</string>
+    <string name="sitio_web">clame-relme.org</string>
+    <string name="sitio_twitt">www.twitter.com</string>
+    <string name="sitio_yout">www.youtube.com</string>
+    <string name="sitio_face">www.facebook.com</string>
+    <string name="sitio_linked">www.linkedin.com</string>
+
+    <string name="sitio_uci">https://www.uci.cu</string>
+    <string name="footer_icono"> ©2019 FIAI-UCI</string>
+    <string name="version">Versión 1.02 alpha1</string>
+    <string name="autores">Jefe de Proyecto\nYor Alex Remond Recio\nDesarrollo\nEddy Yoel Fresno Hernández\nJaime Alan Gutiérrez Cruz</string>
+
+    <string name="name_persona_1">Dr.C. Miriam Nicado</string>
+    <string name="name_persona_2">Dr.C. Gisela Montiel</string>
+    <string name="name_persona_3">Dr.C. María E. Gavarrete</string>
+    <string name="name_persona_4">Dr.C. Tomas Ortega</string>
+    <string name="title_activity_modalidades">ModalidadesActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="titular_conferencias_especiales">Conferencias Especiales</string>
+    <string name="subtutular_conferencias_especiales">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
+
+    <string name="titular_reportes_investigaciones">Reportes de Investigación</string>
+    <string name="subtutular_reportes_investigaciones">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
+
+    <string name="titular_comunicaciones_breves">Comunicaciones Breves</string>
+    <string name="subtutular_comunicaciones_breves">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
+
+    <string name="titular_talleres">Talleres</string>
+    <string name="subtutular_talleres">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
+
+    <string name="titular_grupos_discusion">Grupos de discusión</string>
+    <string name="subtutular_grupos_discusion">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
+
+    <string name="titular_mesa_redonda">Mesas Redondas</string>
+    <string name="subtutular_mesa_redonda">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
+
+    <string name="titular_premios_clame">Premios CLAME</string>
+    <string name="subtutular_premios_clame">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
+
+    <string name="titular_concurso_foto">Concurso Fotografía, Videos, Carteles y Posters</string>
+    <string name="subtutular_concurso_foto">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
+
+    <string name="titular_presentaciones">Presentaciones de materiales y libros</string>
+    <string name="subtutular_presentaciones">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
+
+    <string name="titular_cursos_cortos">Cursos Cortos</string>
+    <string name="subtutular_cursos_cortos">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
+
+    <string name="havana_string">La Habana, Cuba</string>
+    <string name="texto_portada_principal">Reunión Latinoamericana de \nMatemática Educativa</string>
+    <string name="texto_portada_principal_fecha">7 - 12 julio</string>
+    <string name="texto_portada_principal_fecha2">2019</string>
+    <string name="texto_portada_principal_fecha3">www.uci.cu</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

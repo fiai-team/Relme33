@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListaBuscadaActivity"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar">
+    </include>
+    <TextView
+        android:id="@+id/text_encabezado_busqueda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/encabezado_descripcion"
+        android:text="Descripción de Eventos"
+        />
+    <ListView
+        android:id="@+id/lista_buscada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </ListView>
+
+</LinearLayout>

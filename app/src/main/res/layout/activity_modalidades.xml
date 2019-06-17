@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ModalidadesActivity"
+    android:background="@color/azul_cielo">
+
+
+    <com.relme33.fiai.uci.relme33.ViewPagerIndicator
+        android:id = "@+id/view_pager_indicator"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_gravity = "center_horizontal|bottom"
+        android:layout_marginBottom = "20dp"
+        app:delimiterSize = "4dp"
+        app:itemIcon = "@drawable/white_circle"
+        app:itemScale = "1.5"
+        app:itemSelectedTint = "@color/blanco"
+        app:itemSize = "@dimen/_7sdp"
+        app:itemTint = "@color/blanco_transparente"
+        />
+
+
+    <include
+        layout="@layout/toolbar">
+    </include>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:paddingTop="@dimen/_170sdp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:src="@drawable/numero_rozado">
+
+        </ImageView>
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <LinearLayout
+        android:id="@+id/dotsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:gravity="center">
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

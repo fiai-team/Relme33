@@ -1,0 +1,132 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/color_texto_encabezados</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="cajon_de_textos">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_20sdp</item>
+        <item name="android:layout_marginTop">@dimen/_20sdp</item>
+        <item name="android:layout_marginLeft">@dimen/_20sdp</item>
+        <item name="android:layout_marginRight">@dimen/_20sdp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="subtitele_apariencia">
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textSize">@dimen/_9sdp</item>
+    </style>
+
+    <style name="texto_hora_programa">
+        <item name="android:layout_marginStart">@dimen/_5sdp</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/color_texto_encabezados</item>
+    </style>
+
+    <style name="texto_elemento_programa">
+        <item name="android:layout_marginStart">@dimen/_5sdp</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="texto_titulo_programa">
+        <item name="android:layout_marginStart">@dimen/_5sdp</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+    </style>
+
+    <style name="encabezado_descripcion">
+        <item name="android:textSize">@dimen/_25sdp</item>
+        <item name="android:paddingTop">@dimen/_10sdp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/color_texto_encabezados</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="titulo_about_us">
+        <item name="android:layout_marginTop">@dimen/_120sdp</item>
+        <item name="android:text">RELME33</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textSize">@dimen/titulo_about_us</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="nombre_conferencistas">
+        <item name="android:textSize">@dimen/_30sdp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/color_texto_encabezados</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text_nombres_autores">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@string/autores</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:layout_marginStart">@dimen/_16sdp</item>
+    </style>
+
+    <style name="titular_blanco">
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:textSize">@dimen/_30sdp</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingBottom">@dimen/_10sdp</item>
+    </style>
+
+    <style name="titular_blanco_modalidades">
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:textSize">@dimen/_22sdp</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingBottom">@dimen/_10sdp</item>
+    </style>
+
+    <style name="subtitular_blanco">
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:paddingBottom">@dimen/_10sdp</item>
+    </style>
+
+    <style name="subtitulo_portada_wallpaper1">
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textSize">@dimen/_20sdp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="subtitulo_portada_wallpaper2">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/_18sdp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="subtitulo_portada_fecha">
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textSize">@dimen/_60sdp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="text_havana">
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+        <item name="android:layout_marginBottom">@dimen/padin_top_10</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/_20sdp</item>
+    </style>
+</resources>

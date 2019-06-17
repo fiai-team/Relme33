@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/programa_ico"
+        android:title="Programa"
+        android:id="@+id/Programa"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/more"
+        android:title="Abrir"
+        app:showAsAction="always"
+        android:icon="@drawable/menu_toolbar">
+        <menu>
+
+            <item
+                android:icon="@drawable/relme_pequenno_ico"
+                android:title="RELME"
+                android:id="@+id/RELME_33"
+                app:showAsAction="never"
+                />
+            <item
+                android:icon="@drawable/conferencia_ico"
+                android:title="Conferencistas"
+                android:id="@+id/Conferencistas"
+                />
+            <item
+                android:icon="@drawable/modalidades_ico"
+                android:title="Modalidades"
+                android:id="@+id/Modalidades"
+                />
+            <item
+                android:icon="@drawable/mapa_ico"
+                android:title="Mapa"
+                android:id="@+id/Mapa"
+                />
+            <item
+                android:icon="@drawable/contactos_ico"
+                android:title="Contactos"
+                android:id="@+id/Contactos"
+                />
+            <item
+                android:title="Acerca de"
+                android:id="@+id/Acerca_de"
+                android:icon="@drawable/acerca_de_ico"
+                />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FB155D</color>
+    <color name="colorPrimaryDark">#b4023a</color>
+    <color name="colorAccent">#FB155D</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="color_texto_encabezados">#20086A</color>
+    <color name="azul_cielo">#03A9CC</color>
+    <color name="amarillo">#FFC50C</color>
+    <color name="blanco_transparente">#Fccc</color>
+</resources>
