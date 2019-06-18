@@ -32,6 +32,8 @@ public class ConferencistasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_conferencistas);
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_24dp);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_toolbar, menu);
@@ -39,6 +41,11 @@ public class ConferencistasActivity extends AppCompatActivity {
     }
     public boolean onOptionsItemSelected(MenuItem menuItem){
         switch (menuItem.getItemId()){
+            case android.R.id.home:
+                Intent intenthome = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intenthome);
+                finish();
+                break;
             case R.id.RELME_33:
                 Intent intent1 = new Intent(getApplicationContext(),RelmeInfoActivity.class);
                 startActivity(intent1);
@@ -57,7 +64,9 @@ public class ConferencistasActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.Mapa:
-
+                showDialogWait();
+                Intent intent7 = new Intent(getApplicationContext(),MapaActivity.class);
+                startActivity(intent7);
                 finish();
                 break;
             case R.id.Contactos:
@@ -72,6 +81,19 @@ public class ConferencistasActivity extends AppCompatActivity {
                 break;
         }
         return true;
+    }
+
+    private void showDialogWait(){
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View subView = inflater.inflate(R.layout.layout_promptdialog__map_charging, null);
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(subView);
+        builder.setCancelable(false);
+        builder.create();
+
+        builder.show();
+
     }
 
     private void showDialogBiografia(String name, int foto, String bio){

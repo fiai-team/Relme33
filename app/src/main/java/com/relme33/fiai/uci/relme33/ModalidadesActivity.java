@@ -1,5 +1,6 @@
 package com.relme33.fiai.uci.relme33;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -120,7 +121,9 @@ public class ModalidadesActivity extends AppCompatActivity implements Conferenci
                 finish();
                 break;
             case R.id.Mapa:
-
+                showDialogWait();
+                Intent intent7 = new Intent(getApplicationContext(),MapaActivity.class);
+                startActivity(intent7);
                 finish();
                 break;
             case R.id.Contactos:
@@ -135,6 +138,18 @@ public class ModalidadesActivity extends AppCompatActivity implements Conferenci
                 break;
         }
         return true;
+    }
+    private void showDialogWait(){
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View subView = inflater.inflate(R.layout.layout_promptdialog__map_charging, null);
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(subView);
+        builder.setCancelable(false);
+        builder.create();
+
+        builder.show();
+
     }
 
     @Override
@@ -172,7 +187,7 @@ public class ModalidadesActivity extends AppCompatActivity implements Conferenci
            case R.id.comunicaciones_breves_b:
                Intent i3 = new Intent(ModalidadesActivity.this,ListaBuscadaActivity.class);
                Bundle mibundle3 = new Bundle();
-               mibundle3.putString(Utiles.KEY_PASS_MODALIDAD, "cb");
+               mibundle3.putString(Utiles.KEY_PASS_MODALIDAD, Utiles.KEY_PASS_MODALIDAD_CB);
                i3.putExtras(mibundle3);
                startActivity(i3);
                finish();

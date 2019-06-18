@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:gravity="center"
-        android:background="#37BDAE"
+        android:background="@color/colorAccent"
         android:orientation="vertical">
 
 
@@ -54,7 +54,6 @@
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:text="Sucursal 233. Playa #2435345 entre 5ta y 7ma. Horario: 8 am-12pm"
             android:paddingTop="5dp"
             android:textColor="@android:color/black"
             android:visibility="visible" />

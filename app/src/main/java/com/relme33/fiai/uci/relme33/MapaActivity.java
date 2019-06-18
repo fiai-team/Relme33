@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Path;
 import android.graphics.drawable.Drawable;
@@ -19,8 +20,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
@@ -69,7 +74,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MapaActivity extends Activity {
+public class MapaActivity extends AppCompatActivity {
 
     private MapView mapView;
     private GraphHopper hopper;
@@ -89,6 +94,8 @@ public class MapaActivity extends Activity {
     LocationListener locationListener;
     LatLong latLong1;
 
+    private Toolbar toolbar;
+
     @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +106,12 @@ public class MapaActivity extends Activity {
         // mapsFolder = Environment.getExternalStorageDirectory()+"/";
 
         setContentView(R.layout.activity_mapa);
+
+        toolbar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_24dp);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED ||
                     checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED ||
@@ -143,6 +156,8 @@ public class MapaActivity extends Activity {
         }
 
         initFiles();
+
+
         if (savedInstanceState == null) {    // first call
 
             actualizarPosicion();
@@ -152,7 +167,68 @@ public class MapaActivity extends Activity {
 //        calcPath(23.0654,-82.439371 ,23.064811,-82.441412);
 //        calcPath(23.064564,-82.438974,23.063983,-82.441177);
 
+
+
+
     }
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem menuItem){
+        switch (menuItem.getItemId()){
+            case android.R.id.home:
+                Intent intenthome = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intenthome);
+                finish();
+                break;
+            case R.id.RELME_33:
+                Intent intent1 = new Intent(getApplicationContext(),RelmeInfoActivity.class);
+                startActivity(intent1);
+                finish();
+                break;
+            case R.id.Conferencistas:
+                Intent intent2 = new Intent(getApplicationContext(),ConferencistasActivity.class);
+                startActivity(intent2);
+                finish();
+                break;
+            case R.id.Modalidades:
+                Intent intent3 = new Intent(getApplicationContext(),ModalidadesActivity.class);
+                startActivity(intent3);
+                finish();
+                break;
+            case R.id.Programa:
+                Intent intent4 = new Intent(getApplicationContext(),ProgramaActivity.class);
+                startActivity(intent4);
+                finish();
+                break;
+            case R.id.Mapa:
+                break;
+            case R.id.Contactos:
+                Intent intent5 = new Intent(getApplicationContext(),ContactosActivity.class);
+                startActivity(intent5);
+                finish();
+                break;
+            case R.id.Acerca_de:
+                Intent intent6 = new Intent(getApplicationContext(),AcercaDeActivity.class);
+                startActivity(intent6);
+                finish();
+                break;
+        }
+        return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intento_back = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intento_back);
+        super.onBackPressed();
+    }
+
+
+
+    //MAPA
 
     private void showDialogDirection(String pos){
         LayoutInflater inflater = LayoutInflater.from(this);
@@ -234,7 +310,7 @@ public class MapaActivity extends Activity {
                     actualizarPosicion();
 
                 } else {
-                    Toast.makeText(getBaseContext(), "permiso denegado o innesecario", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getBaseContext(), "permiso denegado o innesecario", Toast.LENGTH_SHORT).show();
                     // permission denied, boo! Disable the
                     // functionality that depends on this permission.
                 }
@@ -268,19 +344,19 @@ public class MapaActivity extends Activity {
             @Override
             public void onStatusChanged(String provider, int status, Bundle extras) {
                 Log.e("GPS", ">>>>>>>>>>>>>>>>>>>>>>" + provider + "    " + status);
-                Toast.makeText(MapaActivity.this, provider + " " + status, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MapaActivity.this, provider + " " + status, Toast.LENGTH_SHORT).show();
 
             }
 
             @Override
             public void onProviderEnabled(String provider) {
-                Toast.makeText(MapaActivity.this, "Gps activado!!!!", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MapaActivity.this, "Gps activado!!!!", Toast.LENGTH_SHORT).show();
                 Log.e("GPS", ">>>>>>>>>>>>>>>>>>>>>>" + provider);
             }
 
             @Override
             public void onProviderDisabled(String provider) {
-                Toast.makeText(MapaActivity.this, "Gps desactivado!!!", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MapaActivity.this, "Gps desactivado!!!", Toast.LENGTH_SHORT).show();
                 Log.e("GPS", ">>>>>>>>>>>>>>>>>>>>>>" + provider);
             }
 
@@ -351,7 +427,6 @@ public class MapaActivity extends Activity {
         GeoPoint ru = new GeoPoint(22.987182, -82.462239);
         GeoPoint hu = new GeoPoint(22.983332, -82.464232);
         GeoPoint psc = new GeoPoint(22.9861436, -82.4651212);
-        GeoPoint pr = new GeoPoint(22.9861436, -82.4651212);
         GeoPoint wl = new GeoPoint(22.983548, -82.465576);
         GeoPoint pm = new GeoPoint(22.987991, -82.466827);
 
@@ -365,7 +440,6 @@ public class MapaActivity extends Activity {
         itemizedLayer.addItem(createMarkerItem(ru, R.drawable.ic_comedor));
         itemizedLayer.addItem(createMarkerItem(hu, R.drawable.ic_hotel));
         itemizedLayer.addItem(createMarkerItem(psc, R.drawable.ic_piscina));
-        itemizedLayer.addItem(createMarkerItem(pr, R.drawable.ic_plaza));
         itemizedLayer.addItem(createMarkerItem(wl, R.drawable.ic_cultural));
         itemizedLayer.addItem(createMarkerItem(pm, R.drawable.ic_plaza));
 
@@ -413,15 +487,11 @@ public class MapaActivity extends Activity {
                         break;
 
                     case 9:
-                        showDialogDirection("Plaza de la Revolución José Martí");
-                        break;
-
-                    case 10:
                         showDialogDirection("Centro Cultural Wifredo Lam");
                         break;
 
-                    case 11:
-                        showDialogDirection("Plaza Mella6");
+                    case 10:
+                        showDialogDirection("Plaza Mella");
                         break;
 
                 }
@@ -600,4 +670,6 @@ public class MapaActivity extends Activity {
             return false;
         }
     }
+
+
 }

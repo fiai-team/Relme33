@@ -1,8 +1,10 @@
 package com.relme33.fiai.uci.relme33;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
@@ -126,7 +128,9 @@ public class ProgramaActivity extends AppCompatActivity {
             case R.id.Programa:
                 break;
             case R.id.Mapa:
-
+                showDialogWait();
+                Intent intent7 = new Intent(getApplicationContext(),MapaActivity.class);
+                startActivity(intent7);
                 finish();
                 break;
             case R.id.Contactos:
@@ -142,7 +146,18 @@ public class ProgramaActivity extends AppCompatActivity {
         }
         return true;
     }
+    private void showDialogWait(){
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View subView = inflater.inflate(R.layout.layout_promptdialog__map_charging, null);
 
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(subView);
+        builder.setCancelable(false);
+        builder.create();
+
+        builder.show();
+
+    }
     public void onClick(View view) {
     }
 }

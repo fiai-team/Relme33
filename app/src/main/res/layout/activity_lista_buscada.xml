@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/encabezado_descripcion"
-        android:text="Descripción de Eventos"
+        android:text="Encontrado:"
         />
     <ListView
         android:id="@+id/lista_buscada"

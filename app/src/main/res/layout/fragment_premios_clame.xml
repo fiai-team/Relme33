@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/subtitular_blanco"
-                android:text="@string/subtutular_premios_clame"/>
+                android:text="@string/descripcion_premios_clame"/>
         </ScrollView>
     </LinearLayout>
 

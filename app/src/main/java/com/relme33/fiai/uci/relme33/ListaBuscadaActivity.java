@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.relme33.fiai.uci.relme33.Adapters.AdaptadorEventoBD;
@@ -26,6 +27,7 @@ public class ListaBuscadaActivity extends AppCompatActivity {
     ListView lista_buscada;
     DatabaseHelper basedatos;
     String busca = "cc";
+    TextView texto_encabezado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +40,12 @@ public class ListaBuscadaActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         basedatos = new DatabaseHelper(this);
-
+        texto_encabezado = (TextView) findViewById(R.id.text_encabezado_busqueda);
         lista_buscada = (ListView) findViewById(R.id.lista_buscada);
         Bundle mibundle = this.getIntent().getExtras();
         if(mibundle!=null) {
             busca = mibundle.getString(Utiles.KEY_PASS_MODALIDAD);
+            texto_encabezado.setText(busca);
         }
         lista_buscada.setAdapter( new AdaptadorEventoBD(getApplicationContext(),
                 basedatos.getEventosOfModality(busca),false));

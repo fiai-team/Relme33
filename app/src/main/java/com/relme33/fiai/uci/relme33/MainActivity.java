@@ -1,5 +1,7 @@
 package com.relme33.fiai.uci.relme33;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
@@ -7,9 +9,12 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.relme33.fiai.uci.relme33.fragments.ConferenciasEspecialesFragment;
 
@@ -53,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.Mapa:
+                showDialogWait();
                 Intent intent7 = new Intent(getApplicationContext(),MapaActivity.class);
                 startActivity(intent7);
                 finish();
@@ -82,6 +88,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent3);
                 break;
         }
+    }
+
+    private void showDialogWait(){
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View subView = inflater.inflate(R.layout.layout_promptdialog__map_charging, null);
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(subView);
+        builder.setCancelable(false);
+        builder.create();
+
+        builder.show();
+
     }
 
 }
