@@ -60,7 +60,7 @@ public class ListaBuscadaActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem menuItem){
         switch (menuItem.getItemId()){
             case android.R.id.home:
-                Intent intenthome = new Intent(getApplicationContext(),ProgramaActivity.class);
+                Intent intenthome = new Intent(getApplicationContext(),ModalidadesActivity.class);
                 startActivity(intenthome);
                 finish();
                 break;

@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icono"/>
+            android:src="@drawable/imagen_relme_splash"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

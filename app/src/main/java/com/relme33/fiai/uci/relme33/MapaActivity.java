@@ -535,9 +535,8 @@ public class MapaActivity extends AppCompatActivity {
 
 
         // Map position
-
-        GeoPoint mapCenter = new GeoPoint(22.983573, -82.46565);
-        mapView.map().setMapPosition(mapCenter.getLatitude(), mapCenter.getLongitude(), 1 << 21);
+        GeoPoint mapCenter = new GeoPoint(22.987991, -82.466827);
+        mapView.map().setMapPosition(mapCenter.getLatitude(), mapCenter.getLongitude(), 1 << 15);
         loadGraphStorage();
     }
 
