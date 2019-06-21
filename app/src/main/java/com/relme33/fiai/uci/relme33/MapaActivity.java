@@ -223,6 +223,7 @@ public class MapaActivity extends AppCompatActivity {
     public void onBackPressed() {
         Intent intento_back = new Intent(getApplicationContext(),MainActivity.class);
         startActivity(intento_back);
+        finish();
         super.onBackPressed();
     }
 

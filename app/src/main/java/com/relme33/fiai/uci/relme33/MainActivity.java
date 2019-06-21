@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.relme_cartel_principal:
                 Intent intent3 = new Intent(getApplicationContext(),ModalidadesActivity.class);
                 startActivity(intent3);
+                finish();
                 break;
         }
     }

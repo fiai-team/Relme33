@@ -152,5 +152,11 @@ public class ConferencistasActivity extends AppCompatActivity {
 
     }
 
-
+    @Override
+    public void onBackPressed() {
+        Intent intenthome = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intenthome);
+        finish();
+        super.onBackPressed();
+    }
 }

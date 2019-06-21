@@ -91,6 +91,15 @@ public class RelmeInfoActivity extends AppCompatActivity {
         builder.show();
 
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intenthome = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intenthome);
+        finish();
+        super.onBackPressed();
+    }
+
     public void onClick(View view) {
     }
 }
