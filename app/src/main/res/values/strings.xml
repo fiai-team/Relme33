@@ -16,6 +16,19 @@
         <item>Jueves 11</item>
         <item>Viernes 12</item>
     </string-array>
+    <string-array name="modalidades_del_relme">
+        <item>Todas las Modalidades</item>
+        <item>Conferencia Especial</item>
+        <item>Reportes de Investigación</item>
+        <item>Comunicaciones Breves</item>
+        <item>Talleres</item>
+        <item>Grupos de Discusión</item>
+        <item>Mesas Redondas</item>
+        <item>Premios Clame</item>
+        <item>Concursos</item>
+        <item>Presentaciones</item>
+        <item>Cursos Cortos</item>
+    </string-array>
     <string name="cancel">Cerrar</string>
     <string name="texto_descripcion_eventos">Encuentro Jueventud CLAME\n___________\nRegistro de Participantes y entrega de materiales\n___________\nConferencias Especiales\n___________\nCoffe break\n___________\nTalleres\n___________\nCursos cortos\n___________\nAlmuerzo\n___________\nInauguración\n___________\nConferencia Magistral (1)\n___________\nConferencia MAgistral (2)\n___________\nConferencia Magistral (3)\n___________\nConferencia Magistral (4)\n___________\nCoctel de bienvenida\n___________\nReportes de investigación\n___________\nComunicaciones breves\n___________\nGrupos de discusión\n___________\nReunión dedelegaciones\n___________\nGala Cultural(Teatro Karl Marx)\n___________\nCarteles, videos, fotrografía, presentación de libros y materiales didácticos\n___________\nReunión de miembros de CLAME\n___________\nMesa Redonda\n___________\nClausura\n___________\nCena de despedida\n___________\nExcursiones\n___________\n\n\n</string>
     <string name="numero_contacto">+5378358265</string>

@@ -89,6 +89,21 @@ public class DatabaseHelper extends SQLiteAssetHelper {
         }
         return lista_eventos_filtrados;
     }
+    public ArrayList<Evento> getEventosOfDayAndModality(String dia,String modalidad){
+        ArrayList<Evento> lista_eventos_filtrados = new ArrayList<>();
+        ArrayList<Evento> lista_eventos_buscados = new ArrayList<>();
+        openForReading();
+
+        lista_eventos_buscados.addAll(getEventosFrom(dia));
+
+        for(int i = 0; i<lista_eventos_buscados.size();i++){
+            if((lista_eventos_buscados.get(i).getModalidad()!=null)&&
+                    (lista_eventos_buscados.get(i).getModalidad().compareToIgnoreCase(modalidad)==0)){
+                lista_eventos_filtrados.add(lista_eventos_buscados.get(i));
+            }
+        }
+        return lista_eventos_filtrados;
+    }
 
     public ArrayList<Evento> getEventosOfChair(String person){
         ArrayList<Evento> lista_eventos_filtrados = new ArrayList<>();

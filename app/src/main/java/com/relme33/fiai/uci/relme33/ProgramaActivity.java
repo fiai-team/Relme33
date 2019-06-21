@@ -23,7 +23,10 @@ public class ProgramaActivity extends AppCompatActivity {
     private Toolbar toolbar;
     ListView lista;
     Spinner dias;
-
+    Spinner modalidades;
+    String dia;
+    String modalidad;
+    //d-1,l-2,m-3,mx-4,j-5,v6
     DatabaseHelper basedatos;
 
     @Override
@@ -38,7 +41,9 @@ public class ProgramaActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         basedatos = new DatabaseHelper(this);
-        AdaptadorEventoBD adB = new AdaptadorEventoBD(this,basedatos.getEventosFrom("sunday"),true);
+        dia = "sunday";
+        modalidad = "todas";
+        AdaptadorEventoBD adB = new AdaptadorEventoBD(this,basedatos.getEventosFrom(dia),true);
         lista = (ListView) findViewById(R.id.lista);
         lista.setAdapter(adB);
 
@@ -50,28 +55,65 @@ public class ProgramaActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(parent.getItemAtPosition(position).toString().compareTo("Domingo 7")==0){
-                    lista = (ListView) findViewById(R.id.lista);
-                    lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),basedatos.getEventosFrom("sunday"),true));
-
+                    dia = "sunday";
+                    if(modalidad.compareToIgnoreCase("todas")==0) {
+                        lista = (ListView) findViewById(R.id.lista);
+                        lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(), basedatos.getEventosFrom(dia), true));
+                    }else{
+                        lista = (ListView) findViewById(R.id.lista);
+                        lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),
+                                basedatos.getEventosOfDayAndModality(dia,modalidad),true));
+                    }
                 }else if(parent.getItemAtPosition(position).toString().compareTo("Lunes 8")==0){
-                    lista = (ListView) findViewById(R.id.lista);
-                    lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),basedatos.getEventosFrom("monday"),true));
-
+                    dia = "monday";
+                    if(modalidad.compareToIgnoreCase("todas")==0) {
+                        lista = (ListView) findViewById(R.id.lista);
+                        lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(), basedatos.getEventosFrom(dia), true));
+                    }else{
+                        lista = (ListView) findViewById(R.id.lista);
+                        lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),
+                                basedatos.getEventosOfDayAndModality(dia,modalidad),true));
+                    }
                 }else if(parent.getItemAtPosition(position).toString().compareTo("Martes 9")==0){
-                    lista = (ListView) findViewById(R.id.lista);
-                    lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),basedatos.getEventosFrom("thursday"),true));
-
+                    dia = "thursday";
+                    if(modalidad.compareToIgnoreCase("todas")==0) {
+                        lista = (ListView) findViewById(R.id.lista);
+                        lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(), basedatos.getEventosFrom(dia), true));
+                    }else{
+                        lista = (ListView) findViewById(R.id.lista);
+                        lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),
+                                basedatos.getEventosOfDayAndModality(dia,modalidad),true));
+                    }
                 }else if(parent.getItemAtPosition(position).toString().compareTo("Miércoles 10")==0){
-                    lista = (ListView) findViewById(R.id.lista);
-                    lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),basedatos.getEventosFrom("wednesday"),true));
-
+                    dia = "wednesday";
+                    if(modalidad.compareToIgnoreCase("todas")==0) {
+                        lista = (ListView) findViewById(R.id.lista);
+                        lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(), basedatos.getEventosFrom(dia), true));
+                    }else{
+                        lista = (ListView) findViewById(R.id.lista);
+                        lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),
+                                basedatos.getEventosOfDayAndModality(dia,modalidad),true));
+                    }
                 }else if(parent.getItemAtPosition(position).toString().compareTo("Jueves 11")==0){
-                    lista = (ListView) findViewById(R.id.lista);
-                    lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),basedatos.getEventosFrom("tuesday"),true));
-
+                    dia = "tuesday";
+                    if(modalidad.compareToIgnoreCase("todas")==0) {
+                        lista = (ListView) findViewById(R.id.lista);
+                        lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(), basedatos.getEventosFrom(dia), true));
+                    }else{
+                        lista = (ListView) findViewById(R.id.lista);
+                        lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),
+                                basedatos.getEventosOfDayAndModality(dia,modalidad),true));
+                    }
                 }else if(parent.getItemAtPosition(position).toString().compareTo("Viernes 12")==0){
-                    lista = (ListView) findViewById(R.id.lista);
-                    lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),basedatos.getEventosFrom("friday"),true));
+                    dia = "friday";
+                    if(modalidad.compareToIgnoreCase("todas")==0) {
+                        lista = (ListView) findViewById(R.id.lista);
+                        lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(), basedatos.getEventosFrom(dia), true));
+                    }else{
+                        lista = (ListView) findViewById(R.id.lista);
+                        lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),
+                                basedatos.getEventosOfDayAndModality(dia,modalidad),true));
+                    }
                 }
 
             }
@@ -81,14 +123,87 @@ public class ProgramaActivity extends AppCompatActivity {
 
             }
         });
-        /*lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,R.array.modalidades_del_relme,
+                R.layout.estilo_seleccion_dias);
+        modalidades = (Spinner)findViewById(R.id.spiner_modalidad);
+        modalidades.setAdapter(adapter2);
+        modalidades.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Intent inte_explicaciones = new Intent(getApplicationContext(),ListaBuscadaActivity.class);
-                    startActivity(inte_explicaciones);
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(parent.getItemAtPosition(position).toString().compareTo("Todas las Modalidades")==0){
+                    modalidad = "todas";
+                    lista = (ListView) findViewById(R.id.lista);
+                    lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),basedatos.getEventosFrom(dia),true));
+
+                }else if(parent.getItemAtPosition(position).toString().compareTo("Conferencia Especial")==0){
+                    modalidad = parent.getItemAtPosition(position).toString();
+                    lista = (ListView) findViewById(R.id.lista);
+                    lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),
+                            basedatos.getEventosOfDayAndModality(dia,modalidad),true));
+
+                }else if(parent.getItemAtPosition(position).toString().compareTo("Reportes de Investigación")==0){
+                    modalidad = parent.getItemAtPosition(position).toString();
+                    lista = (ListView) findViewById(R.id.lista);
+                    lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),
+                            basedatos.getEventosOfDayAndModality(dia,modalidad),true));
+
+                }else if(parent.getItemAtPosition(position).toString().compareTo("Comunicaciones Breves")==0){
+                    modalidad = parent.getItemAtPosition(position).toString();
+                    lista = (ListView) findViewById(R.id.lista);
+                    lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),
+                            basedatos.getEventosOfDayAndModality(dia,modalidad),true));
+
+                }else if(parent.getItemAtPosition(position).toString().compareTo("Talleres")==0){
+                    modalidad = parent.getItemAtPosition(position).toString();
+                    lista = (ListView) findViewById(R.id.lista);
+                    lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),
+                            basedatos.getEventosOfDayAndModality(dia,modalidad),true));
+
+                }else if(parent.getItemAtPosition(position).toString().compareTo("Grupos de Discusión")==0){
+                    modalidad = parent.getItemAtPosition(position).toString();
+                    lista = (ListView) findViewById(R.id.lista);
+                    lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),
+                            basedatos.getEventosOfDayAndModality(dia,modalidad),true));
+
+                }else if(parent.getItemAtPosition(position).toString().compareTo("Mesas Redondas")==0){
+                    modalidad = parent.getItemAtPosition(position).toString();
+                    lista = (ListView) findViewById(R.id.lista);
+                    lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),
+                            basedatos.getEventosOfDayAndModality(dia,modalidad),true));
+
+                }else if(parent.getItemAtPosition(position).toString().compareTo("Premios Clame")==0){
+                    modalidad = parent.getItemAtPosition(position).toString();
+                    lista = (ListView) findViewById(R.id.lista);
+                    lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),
+                            basedatos.getEventosOfDayAndModality(dia,modalidad),true));
+
+                }else if(parent.getItemAtPosition(position).toString().compareTo("Concursos")==0){
+                    modalidad = parent.getItemAtPosition(position).toString();
+                    lista = (ListView) findViewById(R.id.lista);
+                    lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),
+                            basedatos.getEventosOfDayAndModality(dia,modalidad),true));
+                }
+                else if(parent.getItemAtPosition(position).toString().compareTo("Presentaciones")==0){
+                    modalidad = parent.getItemAtPosition(position).toString();
+                    lista = (ListView) findViewById(R.id.lista);
+                    lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),
+                            basedatos.getEventosOfDayAndModality(dia,modalidad),true));
+
+                }else if(parent.getItemAtPosition(position).toString().compareTo("Cursos Cortos")==0){
+                    modalidad = parent.getItemAtPosition(position).toString();
+                    lista = (ListView) findViewById(R.id.lista);
+                    lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(),
+                            basedatos.getEventosOfDayAndModality(dia,modalidad),true));
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
-        */
     }
 
     @Override

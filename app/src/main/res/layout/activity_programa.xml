@@ -13,13 +13,21 @@
     </include>
     <Spinner
         android:layout_gravity="end"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:id="@+id/spiner_dias"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginTop="10dp"
         android:elevation="4dp">
-
+    </Spinner>
+    <Spinner
+        android:layout_gravity="end"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/spiner_modalidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:layout_marginTop="10dp">
     </Spinner>
     <RelativeLayout
         android:layout_width="match_parent"
