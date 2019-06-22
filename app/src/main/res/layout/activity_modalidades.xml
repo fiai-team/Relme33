@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".ModalidadesActivity"
-    android:background="@color/azul_cielo">
+    tools:context=".ModalidadesActivity">
 
 
     <com.relme33.fiai.uci.relme33.ViewPagerIndicator
@@ -19,7 +18,7 @@
         app:delimiterSize = "4dp"
         app:itemIcon = "@drawable/white_circle"
         app:itemScale = "1.5"
-        app:itemSelectedTint = "@color/blanco"
+        app:itemSelectedTint = "@color/colorPrimaryDark"
         app:itemSize = "@dimen/_7sdp"
         app:itemTint = "@color/blanco_transparente"
         />
@@ -39,7 +38,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:alpha="0.5"
+            android:alpha="0.3"
             android:src="@drawable/numero_rozado">
 
         </ImageView>

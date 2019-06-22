@@ -94,7 +94,7 @@
         <item name="android:layout_marginStart">@dimen/_10sdp</item>
         <item name="android:layout_marginEnd">@dimen/_10sdp</item>
         <item name="android:textSize">@dimen/_22sdp</item>
-        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textColor">@color/color_texto_encabezados</item>
         <item name="android:textStyle">bold</item>
         <item name="android:paddingBottom">@dimen/_10sdp</item>
     </style>
@@ -103,7 +103,7 @@
         <item name="android:layout_marginStart">@dimen/_10sdp</item>
         <item name="android:layout_marginEnd">@dimen/_10sdp</item>
         <item name="android:textSize">@dimen/_12sdp</item>
-        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textColor">@color/color_texto_encabezados</item>
         <item name="android:paddingBottom">@dimen/_10sdp</item>
     </style>
 

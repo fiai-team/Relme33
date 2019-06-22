@@ -655,6 +655,9 @@ public class MapaActivity extends AppCompatActivity {
         Toast.makeText(this, str, Toast.LENGTH_LONG).show();
     }
 
+    public void onClick(View view) {
+    }
+
     class MapEventsReceiver extends Layer implements GestureListener {
 
         MapEventsReceiver(org.oscim.map.Map map) {

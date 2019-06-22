@@ -5,6 +5,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 
 public class SplashActivity extends AppCompatActivity {
@@ -26,5 +27,8 @@ public class SplashActivity extends AppCompatActivity {
                 finish();
             };
         }, DURACIO_SPLASH);
+    }
+
+    public void onClick(View view) {
     }
 }

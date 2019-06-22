@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/_16sdp"
             android:layout_marginBottom="@dimen/_16sdp"
-            android:src="@drawable/buscar_ico"
+            android:src="@drawable/programa_ico"
             android:layout_alignParentRight="true"
             android:onClick="onClick"/>
     </RelativeLayout>
