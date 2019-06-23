@@ -41,6 +41,8 @@ import com.graphhopper.util.Parameters.Algorithms;
 import com.graphhopper.util.Parameters.Routing;
 import com.graphhopper.util.PointList;
 import com.graphhopper.util.StopWatch;
+import com.relme33.fiai.uci.relme33.utiles.Utiles;
+
 import android.support.v4.app.ActivityCompat;
 
 import org.apache.xmlgraphics.io.Resource;
@@ -95,7 +97,7 @@ public class MapaActivity extends AppCompatActivity {
     LatLong latLong1;
 
     private Toolbar toolbar;
-
+    private int docente_a_mostrar = 0;
     @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,6 +113,11 @@ public class MapaActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_24dp);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Bundle mibundle = this.getIntent().getExtras();
+        if(mibundle!=null) {
+            docente_a_mostrar = mibundle.getInt(Utiles.KEY_PASS_MAPA_SHOW);
+        }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED ||
@@ -162,13 +169,6 @@ public class MapaActivity extends AppCompatActivity {
 
             actualizarPosicion();
         }
-
-//        calcPath(23.063058,-82.439743 ,23.066765,-82.441218);
-//        calcPath(23.0654,-82.439371 ,23.064811,-82.441412);
-//        calcPath(23.064564,-82.438974,23.063983,-82.441177);
-
-
-
 
     }
 
@@ -398,8 +398,6 @@ public class MapaActivity extends AppCompatActivity {
         }
     }
 
-
-
     boolean isReady() {
         // only return true if already loaded
         if (hopper != null)
@@ -414,35 +412,89 @@ public class MapaActivity extends AppCompatActivity {
     }
 
     private void initFiles() {
+        int aux = docente_a_mostrar;
         prepareInProgress = true;
         currentArea = "europe_germany_berlin";
         Log.d("area", "europe_germany_berlin.map");
         loadMap(mapsFolder);
+        GeoPoint d1;
+        GeoPoint d2;
+        GeoPoint d3;
+        GeoPoint d4;
+        GeoPoint d5;
+        GeoPoint d6;
+        GeoPoint ru;
+        GeoPoint hu;
+        GeoPoint psc;
+        GeoPoint wl;
+        GeoPoint pm;
+        switch (aux){
+            case 0:
+                d1 = new GeoPoint(22.987786, -82.465961);
+                d2 = new GeoPoint(22.988827, -82.466845);
+                d3 = new GeoPoint(22.987177, -82.467552);
+                d4 = new GeoPoint(22.987462, -82.468712);
+                d5 = new GeoPoint(22.986148, -82.468168);
+                d6 = new GeoPoint(22.985533, -82.469204);
+                ru = new GeoPoint(22.987182, -82.462239);
+                hu = new GeoPoint(22.983332, -82.464232);
+                psc = new GeoPoint(22.9861436, -82.4651212);
+                wl = new GeoPoint(22.983548, -82.465576);
+                pm = new GeoPoint(22.987991, -82.466827);
+                itemizedLayer.addItem(createMarkerItem(d1, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d2, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d3, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d4, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d5, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d6, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(ru, R.drawable.ic_comedor));
+                itemizedLayer.addItem(createMarkerItem(hu, R.drawable.ic_hotel));
+                itemizedLayer.addItem(createMarkerItem(psc, R.drawable.ic_piscina));
+                itemizedLayer.addItem(createMarkerItem(wl, R.drawable.ic_cultural));
+                itemizedLayer.addItem(createMarkerItem(pm, R.drawable.ic_plaza));
+            break;
+            case 1:
+                d1 = new GeoPoint(22.987786, -82.465961);
+                itemizedLayer.addItem(createMarkerItem(d1, R.drawable.ic_docente));
+                break;
+            case 2:
+                d2 = new GeoPoint(22.988827, -82.466845);
+                itemizedLayer.addItem(createMarkerItem(d2, R.drawable.ic_docente));
+                break;
+            case 3:
+                d3 = new GeoPoint(22.987177, -82.467552);
+                itemizedLayer.addItem(createMarkerItem(d3, R.drawable.ic_docente));
+                break;
+            case 4:
+                d4 = new GeoPoint(22.987462, -82.468712);
+                itemizedLayer.addItem(createMarkerItem(d4, R.drawable.ic_docente));
+                break;
+            case 5:
+                d5 = new GeoPoint(22.986148, -82.468168);
+                itemizedLayer.addItem(createMarkerItem(d5, R.drawable.ic_docente));
+                break;
+            case 6:
+                d6 = new GeoPoint(22.985533, -82.469204);
+                itemizedLayer.addItem(createMarkerItem(d6, R.drawable.ic_docente));
+                break;
+            case 7:
+                ru = new GeoPoint(22.987182, -82.462239);
+                itemizedLayer.addItem(createMarkerItem(ru, R.drawable.ic_comedor));
+                break;
+            case 8:
+                psc = new GeoPoint(22.9861436, -82.4651212);
+                itemizedLayer.addItem(createMarkerItem(psc, R.drawable.ic_piscina));
+                break;
+            case 9:
+                wl = new GeoPoint(22.983548, -82.465576);
+                itemizedLayer.addItem(createMarkerItem(wl, R.drawable.ic_cultural));
+                break;
+            case 10:
+                pm = new GeoPoint(22.987991, -82.466827);
+                itemizedLayer.addItem(createMarkerItem(pm, R.drawable.ic_plaza));
+                break;
+        }
 
-        GeoPoint d1 = new GeoPoint(22.987786, -82.465961);
-        GeoPoint d2 = new GeoPoint(22.988827, -82.466845);
-        GeoPoint d3 = new GeoPoint(22.987177, -82.467552);
-        GeoPoint d4 = new GeoPoint(22.987462, -82.468712);
-        GeoPoint d5 = new GeoPoint(22.986148, -82.468168);
-        GeoPoint d6 = new GeoPoint(22.985533, -82.469204);
-        GeoPoint ru = new GeoPoint(22.987182, -82.462239);
-        GeoPoint hu = new GeoPoint(22.983332, -82.464232);
-        GeoPoint psc = new GeoPoint(22.9861436, -82.4651212);
-        GeoPoint wl = new GeoPoint(22.983548, -82.465576);
-        GeoPoint pm = new GeoPoint(22.987991, -82.466827);
-
-
-        itemizedLayer.addItem(createMarkerItem(d1, R.drawable.ic_docente));
-        itemizedLayer.addItem(createMarkerItem(d2, R.drawable.ic_docente));
-        itemizedLayer.addItem(createMarkerItem(d3, R.drawable.ic_docente));
-        itemizedLayer.addItem(createMarkerItem(d4, R.drawable.ic_docente));
-        itemizedLayer.addItem(createMarkerItem(d5, R.drawable.ic_docente));
-        itemizedLayer.addItem(createMarkerItem(d6, R.drawable.ic_docente));
-        itemizedLayer.addItem(createMarkerItem(ru, R.drawable.ic_comedor));
-        itemizedLayer.addItem(createMarkerItem(hu, R.drawable.ic_hotel));
-        itemizedLayer.addItem(createMarkerItem(psc, R.drawable.ic_piscina));
-        itemizedLayer.addItem(createMarkerItem(wl, R.drawable.ic_cultural));
-        itemizedLayer.addItem(createMarkerItem(pm, R.drawable.ic_plaza));
 
 
 
@@ -511,9 +563,8 @@ public class MapaActivity extends AppCompatActivity {
 
     }
 
-
     void loadMap(String areaFolder) {
-        logUser("loading map");
+        //logUser("loading map");
 
         // Map events receiver
         mapView.map().layers().add(new MapEventsReceiver(mapView.map()));
@@ -521,7 +572,7 @@ public class MapaActivity extends AppCompatActivity {
         // Map file source
         MapFileTileSource tileSource = new MapFileTileSource();
         tileSource.setMapFile(new File(areaFolder, currentArea + ".map").getAbsolutePath());
-        Log.d("RUTAAAA", new File(areaFolder, currentArea + ".map").getAbsolutePath());
+        //Log.d("RUTAAAA", new File(areaFolder, currentArea + ".map").getAbsolutePath());
         VectorTileLayer l = mapView.map().setBaseMap(tileSource);
         mapView.map().setTheme(VtmThemes.DEFAULT);
         mapView.map().layers().add(new BuildingLayer(mapView.map(), l));
@@ -543,7 +594,7 @@ public class MapaActivity extends AppCompatActivity {
 
     @SuppressLint({"NewApi", "StaticFieldLeak"})
     void loadGraphStorage() {
-        logUser("loading graph (" + Constants.VERSION + ") ... ");
+        //logUser("loading graph (" + Constants.VERSION + ") ... ");
         new GHAsyncTask<Void, Void, Path>() {
             protected Path saveDoInBackground(Void... v) throws Exception {
                 GraphHopper tmpHopp = new GraphHopper().forMobile();
@@ -555,10 +606,11 @@ public class MapaActivity extends AppCompatActivity {
 
             protected void onPostExecute(Path o) {
                 if (hasError()) {
-                    logUser("An error happened while creating graph:"
-                            + getErrorMessage());
+                    //logUser("An error happened while creating graph:"
+                    //        + getErrorMessage());
                 } else {
-                    logUser("Finished loading graph. Long press to define where to start and end the route.");
+                    Toast.makeText(getApplicationContext(),getString(R.string.msg_mapa_presione),Toast.LENGTH_LONG).show();
+                    //logUser("Finished loading graph. Long press to define where to start and end the route.");
                 }
 
                 finishPrepare();

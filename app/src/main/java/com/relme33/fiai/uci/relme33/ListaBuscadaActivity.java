@@ -23,7 +23,7 @@ public class ListaBuscadaActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
 
-    Bundle bundle;
+    //Bundle bundle;
     ListView lista_buscada;
     DatabaseHelper basedatos;
     String busca = "cc";

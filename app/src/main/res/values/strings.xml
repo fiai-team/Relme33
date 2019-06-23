@@ -50,7 +50,7 @@
 
     <string name="sitio_uci">https://www.uci.cu</string>
     <string name="footer_icono"> ©2019 FIAI-UCI</string>
-    <string name="version">Versión 1.04 alpha4</string>
+    <string name="version">Versión 1.05 Beta1</string>
     <string name="autores">Jefe de Proyecto\nYor Alex Remond Recio\nDesarrollo\nEddy Yoel Fresno Hernández\nJaime Alan Gutiérrez Cruz</string>
 
     <string name="name_persona_1">Dr.C. Miriam Nicado</string>
@@ -113,5 +113,5 @@
     <string name="descripcion_cursos_cortos">Actividades en las que un especialista en algunos de los temas de la RELME 33, interactúa con los participantes sobre el tema del cual es especialista.</string>
     <string name="descripcion_libros_materiales">En esta modalidad se presentan exposiciones orales breves orientadas a difundir una obra escrita, de investigación y didáctica, publicada por los miembros de la comunidad en los últimos dos años.</string>
 
-
+    <string name="msg_mapa_presione">Presione durante un tiempo para marcar inicio y final de la ruta</string>
 </resources>

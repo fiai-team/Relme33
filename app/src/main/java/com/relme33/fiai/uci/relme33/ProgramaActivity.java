@@ -13,9 +13,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.relme33.fiai.uci.relme33.Adapters.AdaptadorEventoBD;
 import com.relme33.fiai.uci.relme33.database.DatabaseHelper;
+import com.relme33.fiai.uci.relme33.utiles.Utiles;
 
 
 public class ProgramaActivity extends AppCompatActivity {
@@ -46,6 +49,70 @@ public class ProgramaActivity extends AppCompatActivity {
         AdaptadorEventoBD adB = new AdaptadorEventoBD(this,basedatos.getEventosFrom(dia),true);
         lista = (ListView) findViewById(R.id.lista);
         lista.setAdapter(adB);
+
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                TextView ubicacion = (TextView) view.findViewById(R.id.punto_mapa);
+                String aux = ubicacion.getText().toString().substring(0,2);;
+                switch (aux){
+                    case "D1":
+                        showDialogWait();
+                        Intent i1 = new Intent(ProgramaActivity.this,MapaActivity.class);
+                        Bundle mibundle1 = new Bundle();
+                        mibundle1.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE1);
+                        i1.putExtras(mibundle1);
+                        startActivity(i1);
+                        finish();
+                        break;
+                    case "D2":
+                        showDialogWait();
+                        Intent i2 = new Intent(ProgramaActivity.this,MapaActivity.class);
+                        Bundle mibundle2 = new Bundle();
+                        mibundle2.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE2);
+                        i2.putExtras(mibundle2);
+                        startActivity(i2);
+                        finish();
+                        break;
+                    case "D3":
+                        showDialogWait();
+                        Intent i3 = new Intent(ProgramaActivity.this,MapaActivity.class);
+                        Bundle mibundle3 = new Bundle();
+                        mibundle3.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE3);
+                        i3.putExtras(mibundle3);
+                        startActivity(i3);
+                        finish();
+                        break;
+                    case "D4":
+                        showDialogWait();
+                        Intent i4 = new Intent(ProgramaActivity.this,MapaActivity.class);
+                        Bundle mibundle4 = new Bundle();
+                        mibundle4.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE4);
+                        i4.putExtras(mibundle4);
+                        startActivity(i4);
+                        finish();
+                        break;
+                    case "D5":
+                        showDialogWait();
+                        Intent i5 = new Intent(ProgramaActivity.this,MapaActivity.class);
+                        Bundle mibundle5 = new Bundle();
+                        mibundle5.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE5);
+                        i5.putExtras(mibundle5);
+                        startActivity(i5);
+                        finish();
+                        break;
+                    case "D6":
+                        showDialogWait();
+                        Intent i6 = new Intent(ProgramaActivity.this,MapaActivity.class);
+                        Bundle mibundle6 = new Bundle();
+                        mibundle6.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE6);
+                        i6.putExtras(mibundle6);
+                        startActivity(i6);
+                        finish();
+                        break;
+                }
+            }
+        });
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.dias_del_relme,
                 R.layout.estilo_seleccion_dias);
@@ -204,20 +271,6 @@ public class ProgramaActivity extends AppCompatActivity {
 
             }
         });
-
-        lista.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
-
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                /*view.findElementById(R.id.punto_mapa)*/
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
     }
 
     @Override
