@@ -204,6 +204,20 @@ public class ProgramaActivity extends AppCompatActivity {
 
             }
         });
+
+        lista.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                /*view.findElementById(R.id.punto_mapa)*/
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
     }
 
     @Override

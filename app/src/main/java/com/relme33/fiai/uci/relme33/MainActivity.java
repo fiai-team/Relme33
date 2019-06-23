@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick(View view) {
         switch (view.getId()){
+            case R.id.sitio_uci:
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse(getString(R.string.sitio_uci))));
+                break;
             case R.id.relme_cartel_principal:
                 Intent inten = new Intent(getApplicationContext(),ModalidadesActivity.class);
                 startActivity(inten);
