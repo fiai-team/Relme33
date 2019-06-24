@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/loading"
-    android:layout_width="250dp"
+    android:layout_width="@dimen/_250sdp"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:gravity="center"
@@ -55,6 +55,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingTop="5dp"
+            android:textSize="@dimen/_12sdp"
             android:textColor="@android:color/black"
             android:visibility="visible" />
     </LinearLayout>
@@ -71,7 +72,7 @@
         <ImageView
             android:id="@+id/imagen_lugar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="@dimen/_250sdp"/>
         <TextView
             android:id="@+id/btnPositive"
             android:layout_width="match_parent"

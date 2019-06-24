@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.relme33.fiai.uci.relme33.fragments.ConferenciasEspecialesFragment;
 
@@ -46,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent1 = new Intent(getApplicationContext(),ProgramaActivity.class);
                 startActivity(intent1);
                 finish();
+                break;
+            case R.id.menu_programa_general:
+                Toast.makeText(getApplicationContext(),"En desarrollo",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.menu_relme:
                 Intent intent2 = new Intent(getApplicationContext(),RelmeInfoActivity.class);

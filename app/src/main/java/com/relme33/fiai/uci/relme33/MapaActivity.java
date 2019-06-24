@@ -2,7 +2,6 @@ package com.relme33.fiai.uci.relme33;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.Activity;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -14,11 +13,9 @@ import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.media.Image;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -45,9 +42,7 @@ import com.relme33.fiai.uci.relme33.utiles.Utiles;
 
 import android.support.v4.app.ActivityCompat;
 
-import org.apache.xmlgraphics.io.Resource;
 import org.mapsforge.core.model.LatLong;
-import org.mapsforge.map.android.graphics.AndroidGraphicFactory;
 import org.oscim.android.MapView;
 import org.oscim.android.canvas.AndroidGraphics;
 import org.oscim.backend.canvas.Bitmap;
@@ -231,13 +226,13 @@ public class MapaActivity extends AppCompatActivity {
 
     //MAPA
 
-    private void showDialogDirection(String pos){
+    private void showDialogDirection(String pos,Integer img){
         LayoutInflater inflater = LayoutInflater.from(this);
         View subView = inflater.inflate(R.layout.layout_promptdialog_map, null);
         final TextView direction = subView.findViewById(R.id.tvDireccion);
         direction.setText(pos);
         final ImageView imgVista = subView.findViewById(R.id.imagen_lugar);
-        //imgVista.setImageResource(img);
+        imgVista.setImageResource(img);
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setView(subView);
         builder.setCancelable(false);
@@ -506,45 +501,45 @@ public class MapaActivity extends AppCompatActivity {
 
                 switch (index){
                     case 0:
-                        showDialogDirection("Docente 1");
+                        showDialogDirection("Docente 1: Rubén Martínez Villena",R.mipmap.docente1);
                         break;
 
                     case 1:
-                        showDialogDirection("Docente 2");
+                        showDialogDirection("Docente 2: Ernesto Che Guevara",R.mipmap.docente2);
                         break;
 
                     case 2:
-                        showDialogDirection("Docente 3");
+                        showDialogDirection("Docente 3: José Martí Pérez",R.mipmap.docente3);
                         break;
                     case 3:
-                        showDialogDirection("Docente 4");
+                        showDialogDirection("Docente 4: Camilo Cienfuegos Gorriarán",R.mipmap.docente4);
                         break;
 
                     case 4:
-                        showDialogDirection("Docente 5");
+                        showDialogDirection("Docente 5: José Antonio Echeverría",R.mipmap.docente5);
                         break;
 
                     case 5:
-                        showDialogDirection("Docente 6");
+                        showDialogDirection("Docente 6: Mariana Grajales Cuello",R.mipmap.docente6);
                         break;
                     case 6:
-                        showDialogDirection("Restaurante Universitario");
+                        showDialogDirection("Restaurante Universitario",R.mipmap.comedor2);
                         break;
 
                     case 7:
-                        showDialogDirection("Hotel Universitario");
+                        showDialogDirection("Hotel Universitario",R.mipmap.hotel);
                         break;
 
                     case 8:
-                        showDialogDirection("Piscina");
+                        showDialogDirection("Piscina",R.mipmap.piscina);
                         break;
 
                     case 9:
-                        showDialogDirection("Centro Cultural Wifredo Lam");
+                        showDialogDirection("Centro Cultural Wifredo Lam",R.mipmap.plaza_wl);
                         break;
 
                     case 10:
-                        showDialogDirection("Plaza Mella");
+                        showDialogDirection("Plaza Mella",R.mipmap.plaza_mella);
                         break;
 
                 }

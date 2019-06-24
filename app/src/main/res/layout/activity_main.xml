@@ -62,7 +62,7 @@
                         android:layout_width="@dimen/_100sdp"
                         />
                 </LinearLayout>
-                <!--B2-->
+                <!--B11-->
                 <LinearLayout
                     android:elevation="6dp"
                     android:layout_marginBottom="4dp"
@@ -70,6 +70,30 @@
                     android:background="@drawable/background_boton_main"
                     android:layout_row="0"
                     android:layout_column="1">
+                    <ImageView
+                        android:layout_marginStart="2dp"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_width="@dimen/_25sdp"
+                        android:src="@drawable/programa_ico"
+                        />
+                    <Button
+                        android:id="@+id/menu_programa_general"
+                        android:onClick="onClick"
+                        style="@style/botones_main"
+                        android:text="@string/menu_programa_general"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_width="@dimen/_100sdp"
+                        />
+                </LinearLayout>
+                <!--B2-->
+                <LinearLayout
+                    android:elevation="6dp"
+                    android:layout_marginBottom="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/background_boton_main"
+                    android:layout_row="1"
+                    android:layout_column="0">
                     <ImageView
                         android:layout_marginStart="2dp"
                         android:layout_gravity="center"
@@ -94,7 +118,7 @@
                     android:padding="5dp"
                     android:background="@drawable/background_boton_main"
                     android:layout_row="1"
-                    android:layout_column="0">
+                    android:layout_column="1">
                     <ImageView
                         android:layout_gravity="center"
                         android:layout_height="@dimen/_25sdp"
@@ -116,8 +140,8 @@
                     android:layout_marginBottom="4dp"
                     android:padding="5dp"
                     android:background="@drawable/background_boton_main"
-                    android:layout_row="1"
-                    android:layout_column="1">
+                    android:layout_row="2"
+                    android:layout_column="0">
                     <ImageView
                         android:layout_marginStart="2dp"
                         android:layout_gravity="center"
@@ -142,7 +166,7 @@
                     android:padding="5dp"
                     android:background="@drawable/background_boton_main"
                     android:layout_row="2"
-                    android:layout_column="0">
+                    android:layout_column="1">
                     <ImageView
                         android:layout_gravity="center"
                         android:layout_height="@dimen/_25sdp"
@@ -164,8 +188,8 @@
                     android:layout_marginBottom="4dp"
                     android:padding="5dp"
                     android:background="@drawable/background_boton_main"
-                    android:layout_row="2"
-                    android:layout_column="1">
+                    android:layout_row="3"
+                    android:layout_column="0">
                     <ImageView
                         android:layout_marginStart="2dp"
                         android:layout_gravity="center"
@@ -190,7 +214,7 @@
                     android:padding="5dp"
                     android:background="@drawable/background_boton_main"
                     android:layout_row="3"
-                    android:layout_column="0">
+                    android:layout_column="1">
                     <ImageView
                         android:layout_gravity="center"
                         android:layout_height="@dimen/_25sdp"
@@ -213,7 +237,7 @@
                 android:onClick="onClick"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/sitio_uci"
+                android:text="www.uci.cu"
                 style="@style/subtitulo_portada_wallpaper2"/>
         </LinearLayout>
     </ScrollView>
