@@ -198,6 +198,11 @@ public class MapaActivity extends AppCompatActivity {
                 startActivity(intent4);
                 finish();
                 break;
+            case R.id.programa_general:
+                Intent intent44 = new Intent(getApplicationContext(),ProgramaGeneralActivity.class);
+                startActivity(intent44);
+                finish();
+                break;
             case R.id.Mapa:
                 break;
             case R.id.Contactos:

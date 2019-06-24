@@ -14,7 +14,12 @@
         app:showAsAction="always"
         android:icon="@drawable/menu_toolbar">
         <menu>
-
+            <item
+                android:icon="@drawable/programa_rozado_ico"
+                android:title="@string/menu_programa_general"
+                android:id="@+id/programa_general"
+                app:showAsAction="never"
+                />
             <item
                 android:icon="@drawable/relme_pequenno_ico"
                 android:title="@string/menu_relme"

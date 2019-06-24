@@ -309,6 +309,11 @@ public class ProgramaActivity extends AppCompatActivity {
                 break;
             case R.id.Programa:
                 break;
+            case R.id.programa_general:
+                Intent intent44 = new Intent(getApplicationContext(),ProgramaGeneralActivity.class);
+                startActivity(intent44);
+                finish();
+                break;
             case R.id.Mapa:
                 showDialogWait();
                 Intent intent7 = new Intent(getApplicationContext(),MapaActivity.class);

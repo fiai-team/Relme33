@@ -72,7 +72,7 @@
         <ImageView
             android:id="@+id/imagen_lugar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_250sdp"/>
+            android:layout_height="@dimen/_150sdp"/>
         <TextView
             android:id="@+id/btnPositive"
             android:layout_width="match_parent"

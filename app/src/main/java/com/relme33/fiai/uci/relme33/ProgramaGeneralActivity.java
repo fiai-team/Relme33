@@ -9,29 +9,21 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.Toast;
 
-public class RelmeInfoActivity extends AppCompatActivity {
+public class ProgramaGeneralActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_relme_info);
+        setContentView(R.layout.activity_programa_general);
 
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_24dp);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
     }
-
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_toolbar, menu);
         return true;
@@ -44,6 +36,9 @@ public class RelmeInfoActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.RELME_33:
+                Intent intent1 = new Intent(getApplicationContext(),RelmeInfoActivity.class);
+                startActivity(intent1);
+                finish();
                 break;
             case R.id.Conferencistas:
                 Intent intent2 = new Intent(getApplicationContext(),ConferencistasActivity.class);
@@ -61,9 +56,6 @@ public class RelmeInfoActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.programa_general:
-                Intent intent44 = new Intent(getApplicationContext(),ProgramaGeneralActivity.class);
-                startActivity(intent44);
-                finish();
                 break;
             case R.id.Mapa:
                 showDialogWait();

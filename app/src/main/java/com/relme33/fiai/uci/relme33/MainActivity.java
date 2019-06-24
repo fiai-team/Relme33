@@ -49,7 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.menu_programa_general:
-                Toast.makeText(getApplicationContext(),"En desarrollo",Toast.LENGTH_SHORT).show();
+                Intent intent11 = new Intent(getApplicationContext(),ProgramaGeneralActivity.class);
+                startActivity(intent11);
+                finish();
                 break;
             case R.id.menu_relme:
                 Intent intent2 = new Intent(getApplicationContext(),RelmeInfoActivity.class);

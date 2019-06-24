@@ -46,6 +46,6 @@
             android:layout_marginBottom="@dimen/_16sdp"
             android:src="@drawable/programa_ico"
             android:layout_alignParentRight="true"
-            tools:ignore="OnClick" />
+            android:onClick="onClick"/>
     </RelativeLayout>
 </FrameLayout>

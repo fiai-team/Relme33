@@ -9,17 +9,30 @@
     <include
         layout="@layout/toolbar">
     </include>
-    <TextView
-        android:id="@+id/text_encabezado_busqueda"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/encabezado_descripcion"
-        android:text="Encontrado:"
-        />
-    <ListView
-        android:id="@+id/lista_buscada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </ListView>
-
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.3"
+            android:src="@drawable/numero_rozado"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/text_encabezado_busqueda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/encabezado_descripcion"
+                android:text="Encontrado:"
+                />
+            <ListView
+                android:id="@+id/lista_buscada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </ListView>
+            </LinearLayout>
+    </FrameLayout>
 </LinearLayout>

@@ -76,9 +76,9 @@ public class DatabaseHelper extends SQLiteAssetHelper {
 
         lista_eventos_buscados.addAll(getEventosFrom("sunday"));
         lista_eventos_buscados.addAll(getEventosFrom("monday"));
-        lista_eventos_buscados.addAll(getEventosFrom("thursday"));
-        lista_eventos_buscados.addAll(getEventosFrom("wednesday"));
         lista_eventos_buscados.addAll(getEventosFrom("tuesday"));
+        lista_eventos_buscados.addAll(getEventosFrom("wednesday"));
+        lista_eventos_buscados.addAll(getEventosFrom("thursday"));
         lista_eventos_buscados.addAll(getEventosFrom("friday"));
         //lista_eventos_buscados.addAll(getEventosFrom("sabado"));
 

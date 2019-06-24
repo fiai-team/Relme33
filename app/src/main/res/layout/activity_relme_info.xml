@@ -35,11 +35,6 @@
                 style="@style/cajon_de_textos"
                 android:layout_marginStart="4dp"
                 />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/cartel_patrocinadores"
-                android:text="@string/patrocinadores_cartel"/>
             <LinearLayout
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_width="match_parent"

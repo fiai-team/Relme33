@@ -8,7 +8,7 @@
     <string name="texto_persona_3">Doctorado en Didáctica de la Matemática Facultad de Ciencias de la Educación, Universidad de Granada, España Máster en Didáctica de la Matemática Facultad de Ciencias de la Educación.Universidad de Granada, España Licenciada en Enseñanza de la Matemática Facultad de Ciencias Exactas y Naturales y Centro de Investigación y Docencia en Educación. Universidad Nacional, Costa Rica. Licenciada en Ciencias de la Educación con énfasis en Didáctica de la Matemática Centro de Investigación y Docencia en Educación. Universidad Nacional, Costa Rica.\n\n</string>
     <string name="texto_persona_4">En la actualidad es el director del Departamento de Didáctica de las CCEE, CCSS y de la Matemática de la Universidad de Valladolid. Ha dirigido diecinueve tesis doctorales y en la actualidad está orientando a otros doctorandos que tienen sus trabajos de tesis muy avanzados. Ha participado en numerosos tribunales de tesis doctorales y en otros de provisión de plazas de profesores titulares y catedráticos de Universidad. Tiene escritos más de 150 ensayos y trabajos de investigación entre capítulos de libro, libros y artículos en revistas, todos ellos sobre Educación Matemática. Ha arbitrado numerosos trabajos de investigación para revistas y para congresos de Didáctica de la Matemática. Ha impartido numerosas conferencias en congresos e instituciones así como numerosos seminarios de investigación en varias universidades.\n\n</string>
     <!--Nombre de los botones-->
-    <string name="menu_programa_eventos">Programa de \nEventos</string>
+    <string name="menu_programa_eventos">Programa \nAcadémico</string>
     <string name="menu_programa_general">Programa General</string>
     <string name="menu_relme">RELME</string>
     <string name="menu_conferencistas">Conferencistas</string>
@@ -101,7 +101,7 @@
     <string name="texto_portada_principal_fecha3">www.uci.cu</string>
 
     <string name="text_espere_justificacion">Estamos cargando el mapa, en un breve instante se mostrará.</string>
-    
+
     <string name="descripcion_conferencias_especiales">Las conferencias especiales estarán organizadas por el Comité Organizador y divulgadas con antelación al comienzo de la RELME.</string>
     <string name="descripcion_reportes">En esta modalidad se presentan informes finales acerca de los resultados de una investigación en torno a un objeto de estudio en matemática educativa, o experiencias de enseñanza aprendizaje de la matemática en escenarios escolares a partir del diseño e implementación de materiales didácticos con fundamento teórico. Los reportes están a cargo de investigadores, noveles o experimentados, que se presentan de manera individual o como miembros de un equipo de trabajo.</string>
     <string name="descripcion_comunicaciones_breves">En esta modalidad se presentan investigaciones en un nivel de desarrollo inicial, avances de investigación, estados del arte, conformación de marcos teóricos o análisis de diseños didácticos experimentales. También se incluyen relatos de experiencia de aula o innovaciones didácticas. En general, son propuestas de temas de investigación o experiencias de aula que los docentes o investigadores comienzan a perfilar como diseños de proyectos, y que quieren compartir con otros colegas en la búsqueda de comentarios que orienten las réplicas o líneas de trabajo y que enriquezcan las experiencias de los investigadores.</string>
@@ -116,4 +116,5 @@
     <string name="msg_mapa_presione">Presione durante un tiempo para marcar inicio y final de la ruta</string>
     <string name="filtrar">Filtrar:</string>
     <string name="patrocinadores_cartel">Patrocinadores:</string>
+    <string name="encabezado_programa_general">Programa General</string>
 </resources>

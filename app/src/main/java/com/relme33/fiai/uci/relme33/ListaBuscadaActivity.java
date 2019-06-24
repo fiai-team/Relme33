@@ -1,12 +1,15 @@
 package com.relme33.fiai.uci.relme33;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -50,7 +53,69 @@ public class ListaBuscadaActivity extends AppCompatActivity {
         lista_buscada.setAdapter( new AdaptadorEventoBD(getApplicationContext(),
                 basedatos.getEventosOfModality(busca),false));
 
-
+        lista_buscada.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                TextView ubicacion = (TextView) view.findViewById(R.id.punto_mapa);
+                String aux = ubicacion.getText().toString().substring(0,2);;
+                switch (aux){
+                    case "D1":
+                        showDialogWait();
+                        Intent i1 = new Intent(ListaBuscadaActivity.this,MapaActivity.class);
+                        Bundle mibundle1 = new Bundle();
+                        mibundle1.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE1);
+                        i1.putExtras(mibundle1);
+                        startActivity(i1);
+                        finish();
+                        break;
+                    case "D2":
+                        showDialogWait();
+                        Intent i2 = new Intent(ListaBuscadaActivity.this,MapaActivity.class);
+                        Bundle mibundle2 = new Bundle();
+                        mibundle2.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE2);
+                        i2.putExtras(mibundle2);
+                        startActivity(i2);
+                        finish();
+                        break;
+                    case "D3":
+                        showDialogWait();
+                        Intent i3 = new Intent(ListaBuscadaActivity.this,MapaActivity.class);
+                        Bundle mibundle3 = new Bundle();
+                        mibundle3.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE3);
+                        i3.putExtras(mibundle3);
+                        startActivity(i3);
+                        finish();
+                        break;
+                    case "D4":
+                        showDialogWait();
+                        Intent i4 = new Intent(ListaBuscadaActivity.this,MapaActivity.class);
+                        Bundle mibundle4 = new Bundle();
+                        mibundle4.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE4);
+                        i4.putExtras(mibundle4);
+                        startActivity(i4);
+                        finish();
+                        break;
+                    case "D5":
+                        showDialogWait();
+                        Intent i5 = new Intent(ListaBuscadaActivity.this,MapaActivity.class);
+                        Bundle mibundle5 = new Bundle();
+                        mibundle5.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE5);
+                        i5.putExtras(mibundle5);
+                        startActivity(i5);
+                        finish();
+                        break;
+                    case "D6":
+                        showDialogWait();
+                        Intent i6 = new Intent(ListaBuscadaActivity.this,MapaActivity.class);
+                        Bundle mibundle6 = new Bundle();
+                        mibundle6.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE6);
+                        i6.putExtras(mibundle6);
+                        startActivity(i6);
+                        finish();
+                        break;
+                }
+            }
+        });
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
@@ -84,7 +149,16 @@ public class ListaBuscadaActivity extends AppCompatActivity {
                 startActivity(intent4);
                 finish();
                 break;
+            case R.id.programa_general:
+                Intent intent44 = new Intent(getApplicationContext(),ProgramaGeneralActivity.class);
+                startActivity(intent44);
+                finish();
+                break;
             case R.id.Mapa:
+                showDialogWait();
+                Intent intent7 = new Intent(getApplicationContext(),MapaActivity.class);
+                startActivity(intent7);
+                finish();
                 break;
             case R.id.Contactos:
                 Intent intent5 = new Intent(getApplicationContext(),ContactosActivity.class);
@@ -106,7 +180,18 @@ public class ListaBuscadaActivity extends AppCompatActivity {
         finish();
         super.onBackPressed();
     }
+    private void showDialogWait(){
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View subView = inflater.inflate(R.layout.layout_promptdialog__map_charging, null);
 
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(subView);
+        builder.setCancelable(false);
+        builder.create();
+
+        builder.show();
+
+    }
     public void onClick(View view) {
     }
 }
