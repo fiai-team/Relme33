@@ -57,7 +57,7 @@
 
     <style name="titulo_about_us">
         <item name="android:layout_marginTop">@dimen/_120sdp</item>
-        <item name="android:text">RELME33</item>
+        <item name="android:text">@string/app_name</item>
         <item name="android:textColor">@color/blanco</item>
         <item name="android:textSize">@dimen/titulo_about_us</item>
         <item name="android:textAlignment">center</item>

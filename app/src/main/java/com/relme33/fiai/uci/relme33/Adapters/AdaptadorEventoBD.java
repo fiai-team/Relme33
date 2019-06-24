@@ -39,19 +39,22 @@ public class AdaptadorEventoBD extends BaseAdapter {
 
         TextView view_ubicacion = (TextView) vista.findViewById(R.id.punto_mapa);
 
+        TextView view_autor = (TextView) vista.findViewById(R.id.autor_text);
+
         TextView view_chair = (TextView) vista.findViewById(R.id.chair_text);
 
         view_Titulos.setText(eventos.get(position).getDescripcion());
         view_ubicacion.setText(eventos.get(position).getUbicacion());
 
         if(t){
-            auxT = eventos.get(position).getTiempo().substring(0,11);
-        }else{
             auxT = eventos.get(position).getTiempo();
+        }else{
+            auxT = eventos.get(position).getTiempo() + " " + eventos.get(position).getDia();
         }
 
         view_horas.setText(auxT);
-        view_chair.setText(eventos.get(position).getPerson());
+        view_autor.setText("Autores: "+ eventos.get(position).getAutor());
+        view_chair.setText("Chairs: " + eventos.get(position).getPerson());
 
         return vista;
     }

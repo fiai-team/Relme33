@@ -142,7 +142,7 @@ public class ProgramaActivity extends AppCompatActivity {
                                 basedatos.getEventosOfDayAndModality(dia,modalidad),true));
                     }
                 }else if(parent.getItemAtPosition(position).toString().compareTo("Martes 9")==0){
-                    dia = "thursday";
+                    dia = "tuesday";
                     if(modalidad.compareToIgnoreCase("todas")==0) {
                         lista = (ListView) findViewById(R.id.lista);
                         lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(), basedatos.getEventosFrom(dia), true));
@@ -162,7 +162,7 @@ public class ProgramaActivity extends AppCompatActivity {
                                 basedatos.getEventosOfDayAndModality(dia,modalidad),true));
                     }
                 }else if(parent.getItemAtPosition(position).toString().compareTo("Jueves 11")==0){
-                    dia = "tuesday";
+                    dia = "thursday";
                     if(modalidad.compareToIgnoreCase("todas")==0) {
                         lista = (ListView) findViewById(R.id.lista);
                         lista.setAdapter(new AdaptadorEventoBD(getApplicationContext(), basedatos.getEventosFrom(dia), true));

@@ -57,6 +57,8 @@ public class DatabaseHelper extends SQLiteAssetHelper {
                     evento.setModalidad(cursor.getString(3));
                     evento.setTiempo(cursor.getString(4));
                     evento.setUbicacion(cursor.getString(5));
+                    evento.setDia(cursor.getString(6));
+                    evento.setAutor(cursor.getString(7));
 
                     lista_eventos.add(evento);
                 }

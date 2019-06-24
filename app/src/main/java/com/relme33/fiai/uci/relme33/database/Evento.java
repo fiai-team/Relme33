@@ -7,6 +7,8 @@ public class Evento {
     private String ubicacion = "";
     private String modalidad = "";
     private String person = "";
+    private String autor = "";
+    private String dia = "";
 
     public Evento(){
 
@@ -14,13 +16,32 @@ public class Evento {
 
 
 
-    public Evento(Integer id_evento, String descripcion, String tiempo, String ubicacion, String modalidad, String person) {
+    public Evento(Integer id_evento, String descripcion, String tiempo, String ubicacion,
+                  String modalidad, String person,String autor, String dia) {
         this.id_evento = id_evento;
         this.descripcion = descripcion;
         this.tiempo = tiempo;
         this.ubicacion = ubicacion;
         this.modalidad = modalidad;
         this.person = person;
+        this.autor = autor;
+        this.dia = dia;
+    }
+
+    public String getDia() {
+        return dia;
+    }
+
+    public void setDia(String dia) {
+        this.dia = dia;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
 
     public Integer getId_evento() {

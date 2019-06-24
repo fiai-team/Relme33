@@ -70,12 +70,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/person_ico"/>
-            <TextView
-                android:id="@+id/chair_text"
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/texto_hora_programa"
-                android:text="example"/>
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/autor_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/texto_hora_programa"
+                    android:text="example"/>
+                <TextView
+                    android:id="@+id/chair_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/texto_hora_programa"
+                    android:text="example"/>
+                </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
