@@ -114,4 +114,6 @@
     <string name="descripcion_libros_materiales">En esta modalidad se presentan exposiciones orales breves orientadas a difundir una obra escrita, de investigación y didáctica, publicada por los miembros de la comunidad en los últimos dos años.</string>
 
     <string name="msg_mapa_presione">Presione durante un tiempo para marcar inicio y final de la ruta</string>
+    <string name="filtrar">Filtrar:</string>
+    <string name="patrocinadores_cartel">Patrocinadores:</string>
 </resources>

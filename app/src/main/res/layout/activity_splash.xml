@@ -16,22 +16,5 @@
             android:layout_height="wrap_content"
             android:src="@drawable/imagen_relme_splash"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_60sdp"
-        android:gravity="center"
-        android:layout_gravity="bottom">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/casio"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/cubaron"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/eti_logo"/>
-    </LinearLayout>
+
 </FrameLayout>

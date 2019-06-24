@@ -1,40 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RelmeInfoActivity">
+    tools:context=".RelmeInfoActivity"
+    android:orientation="vertical">
 
     <include
         layout="@layout/toolbar">
     </include>
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/_70sdp"
-        android:gravity="top"
-        android:orientation="vertical"
-        >
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical"
+            >
 
-        <ImageView
-            android:id="@+id/imagen_bandera"
-            android:layout_width="@dimen/_200sdp"
-            android:layout_height="@dimen/_100sdp"
-            android:layout_gravity="center"
-            android:background="@drawable/bandera_relme_horizontal"
+            <ImageView
+                android:id="@+id/imagen_bandera"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bandera_relme_horizontal"
 
-            />
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+                />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/texto_relme_info"
                 style="@style/cajon_de_textos"
-                android:gravity="center"
+                android:layout_marginStart="4dp"
                 />
-        </ScrollView>
-    </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/cartel_patrocinadores"
+                android:text="@string/patrocinadores_cartel"/>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/casio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/eti_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/cubaron"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/xetid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
