@@ -113,6 +113,51 @@ public class ListaBuscadaActivity extends AppCompatActivity {
                         startActivity(i6);
                         finish();
                         break;
+                    case "UH":
+                        showDialogWait();
+                        Intent i7 = new Intent(ListaBuscadaActivity.this,MapaActivity.class);
+                        Bundle mibundle7 = new Bundle();
+                        mibundle7.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_UH);
+                        i7.putExtras(mibundle7);
+                        startActivity(i7);
+                        finish();
+                        break;
+                    case "TE":
+                        showDialogWait();
+                        Intent i8 = new Intent(ListaBuscadaActivity.this,MapaActivity.class);
+                        Bundle mibundle8 = new Bundle();
+                        mibundle8.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_KM);
+                        i8.putExtras(mibundle8);
+                        startActivity(i8);
+                        finish();
+                        break;
+                    case "EL":
+                        showDialogWait();
+                        Intent i9 = new Intent(ListaBuscadaActivity.this,MapaActivity.class);
+                        Bundle mibundle9 = new Bundle();
+                        mibundle9.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_EL);
+                        i9.putExtras(mibundle9);
+                        startActivity(i9);
+                        finish();
+                        break;
+                    case "LA":
+                        showDialogWait();
+                        Intent i10 = new Intent(ListaBuscadaActivity.this,MapaActivity.class);
+                        Bundle mibundle10 = new Bundle();
+                        mibundle10.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_LA);
+                        i10.putExtras(mibundle10);
+                        startActivity(i10);
+                        finish();
+                        break;
+                    case "La":
+                        showDialogWait();
+                        Intent i11 = new Intent(ListaBuscadaActivity.this,MapaActivity.class);
+                        Bundle mibundle11 = new Bundle();
+                        mibundle11.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_LAH);
+                        i11.putExtras(mibundle11);
+                        startActivity(i11);
+                        finish();
+                        break;
                 }
             }
         });

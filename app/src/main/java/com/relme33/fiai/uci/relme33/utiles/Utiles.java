@@ -21,6 +21,11 @@ public class Utiles {
     public static final int KEY_MAP_DOCENTE4 = 4;
     public static final int KEY_MAP_DOCENTE5 = 5;
     public static final int KEY_MAP_DOCENTE6 = 6;
-
+    //fuera de la uci
+    public static final int KEY_MAP_UH = 7;
+    public static final int KEY_MAP_KM = 8;
+    public static final int KEY_MAP_EL = 9;
+    public static final int KEY_MAP_LA = 10;
+    public static final int KEY_MAP_LAH = 11;
 
 }

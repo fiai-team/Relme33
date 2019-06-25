@@ -29,7 +29,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <ImageView
-                        android:background="@mipmap/horario_dias"
+                        android:src="@mipmap/horario_dias"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </HorizontalScrollView>

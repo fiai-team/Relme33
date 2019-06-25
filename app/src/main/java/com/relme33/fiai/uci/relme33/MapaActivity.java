@@ -413,34 +413,170 @@ public class MapaActivity extends AppCompatActivity {
 
     private void initFiles() {
         int aux = docente_a_mostrar;
+        GeoPoint donde_abre_mapa = new GeoPoint(22.987991, -82.466827);
+        if(aux == 7){
+            //UH
+            donde_abre_mapa = new GeoPoint(23.136721, -82.3816635);
+        }else if(aux == 8){
+            donde_abre_mapa = new GeoPoint(23.129435,-82.419627);
+        }else if(aux == 9){
+            donde_abre_mapa = new GeoPoint(23.082384,-82.455462);
+        }else if(aux == 10){
+            donde_abre_mapa = new GeoPoint(23.098941,-82.450801);
+        }else if(aux == 11){
+            donde_abre_mapa = new GeoPoint(23.137991,-82.365856);
+        }
+
         prepareInProgress = true;
         currentArea = "europe_germany_berlin";
         Log.d("area", "europe_germany_berlin.map");
-        loadMap(mapsFolder);
-        GeoPoint d1;
-        GeoPoint d2;
-        GeoPoint d3;
-        GeoPoint d4;
-        GeoPoint d5;
-        GeoPoint d6;
-        GeoPoint ru;
-        GeoPoint hu;
-        GeoPoint psc;
-        GeoPoint wl;
-        GeoPoint pm;
+        loadMap(mapsFolder,donde_abre_mapa);
+
+        GeoPoint d1 = new GeoPoint(22.987786, -82.465961);
+        GeoPoint d2 = new GeoPoint(22.988827, -82.466845);
+        GeoPoint d3 = new GeoPoint(22.987177, -82.467552);
+        GeoPoint d4 = new GeoPoint(22.987462, -82.468712);
+        GeoPoint d5 = new GeoPoint(22.986148, -82.468168);
+        GeoPoint d6 = new GeoPoint(22.985533, -82.469204);
+        GeoPoint ru = new GeoPoint(22.987182, -82.462239);
+        GeoPoint hu = new GeoPoint(22.983332, -82.464232);
+        GeoPoint psc = new GeoPoint(22.9861436, -82.4651212);
+        GeoPoint wl = new GeoPoint(22.983548, -82.465576);
+        GeoPoint pm = new GeoPoint(22.987991, -82.466827);
+        GeoPoint pn = new GeoPoint(22.989807,-82.464709);
+        GeoPoint uh = new GeoPoint(23.136721, -82.3816635);
+        GeoPoint km = new GeoPoint(23.129435,-82.419627);
+        GeoPoint el = new GeoPoint(23.082384,-82.455462);
+        GeoPoint la = new GeoPoint(23.098941,-82.450801);
+
         switch (aux){
-            case 0:
-                d1 = new GeoPoint(22.987786, -82.465961);
-                d2 = new GeoPoint(22.988827, -82.466845);
-                d3 = new GeoPoint(22.987177, -82.467552);
-                d4 = new GeoPoint(22.987462, -82.468712);
-                d5 = new GeoPoint(22.986148, -82.468168);
-                d6 = new GeoPoint(22.985533, -82.469204);
-                ru = new GeoPoint(22.987182, -82.462239);
-                hu = new GeoPoint(22.983332, -82.464232);
-                psc = new GeoPoint(22.9861436, -82.4651212);
-                wl = new GeoPoint(22.983548, -82.465576);
-                pm = new GeoPoint(22.987991, -82.466827);
+            case 1:
+                itemizedLayer.addItem(createMarkerItem(d1, R.drawable.ic_current_pin));
+                itemizedLayer.addItem(createMarkerItem(d2, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d3, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d4, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d5, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d6, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(ru, R.drawable.ic_comedor));
+                itemizedLayer.addItem(createMarkerItem(hu, R.drawable.ic_hotel));
+                itemizedLayer.addItem(createMarkerItem(psc, R.drawable.ic_piscina));
+                itemizedLayer.addItem(createMarkerItem(wl, R.drawable.ic_cultural));
+                itemizedLayer.addItem(createMarkerItem(pm, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(pn, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(uh, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(km, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(el, R.drawable.ic_comedor));
+                itemizedLayer.addItem(createMarkerItem(la, R.drawable.ic_comedor));
+                break;
+            case 2:
+                itemizedLayer.addItem(createMarkerItem(d1, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d2, R.drawable.ic_current_pin));
+                itemizedLayer.addItem(createMarkerItem(d3, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d4, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d5, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d6, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(ru, R.drawable.ic_comedor));
+                itemizedLayer.addItem(createMarkerItem(hu, R.drawable.ic_hotel));
+                itemizedLayer.addItem(createMarkerItem(psc, R.drawable.ic_piscina));
+                itemizedLayer.addItem(createMarkerItem(wl, R.drawable.ic_cultural));
+                itemizedLayer.addItem(createMarkerItem(pm, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(pn, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(uh, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(km, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(el, R.drawable.ic_comedor));
+                itemizedLayer.addItem(createMarkerItem(la, R.drawable.ic_comedor));
+                break;
+            case 3:
+                itemizedLayer.addItem(createMarkerItem(d1, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d2, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d3, R.drawable.ic_current_pin));
+                itemizedLayer.addItem(createMarkerItem(d4, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d5, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d6, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(ru, R.drawable.ic_comedor));
+                itemizedLayer.addItem(createMarkerItem(hu, R.drawable.ic_hotel));
+                itemizedLayer.addItem(createMarkerItem(psc, R.drawable.ic_piscina));
+                itemizedLayer.addItem(createMarkerItem(wl, R.drawable.ic_cultural));
+                itemizedLayer.addItem(createMarkerItem(pm, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(pn, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(uh, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(km, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(el, R.drawable.ic_comedor));
+                itemizedLayer.addItem(createMarkerItem(la, R.drawable.ic_comedor));
+                break;
+            case 4:
+                itemizedLayer.addItem(createMarkerItem(d1, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d2, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d3, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d4, R.drawable.ic_current_pin));
+                itemizedLayer.addItem(createMarkerItem(d5, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d6, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(ru, R.drawable.ic_comedor));
+                itemizedLayer.addItem(createMarkerItem(hu, R.drawable.ic_hotel));
+                itemizedLayer.addItem(createMarkerItem(psc, R.drawable.ic_piscina));
+                itemizedLayer.addItem(createMarkerItem(wl, R.drawable.ic_cultural));
+                itemizedLayer.addItem(createMarkerItem(pm, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(pn, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(uh, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(km, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(el, R.drawable.ic_comedor));
+                itemizedLayer.addItem(createMarkerItem(la, R.drawable.ic_comedor));
+                break;
+            case 5:
+                itemizedLayer.addItem(createMarkerItem(d1, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d2, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d3, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d4, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d5, R.drawable.ic_current_pin));
+                itemizedLayer.addItem(createMarkerItem(d6, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(ru, R.drawable.ic_comedor));
+                itemizedLayer.addItem(createMarkerItem(hu, R.drawable.ic_hotel));
+                itemizedLayer.addItem(createMarkerItem(psc, R.drawable.ic_piscina));
+                itemizedLayer.addItem(createMarkerItem(wl, R.drawable.ic_cultural));
+                itemizedLayer.addItem(createMarkerItem(pm, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(pn, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(uh, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(km, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(el, R.drawable.ic_comedor));
+                itemizedLayer.addItem(createMarkerItem(la, R.drawable.ic_comedor));
+                break;
+            case 6:
+                itemizedLayer.addItem(createMarkerItem(d1, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d2, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d3, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d4, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d5, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d6, R.drawable.ic_current_pin));
+                itemizedLayer.addItem(createMarkerItem(ru, R.drawable.ic_comedor));
+                itemizedLayer.addItem(createMarkerItem(hu, R.drawable.ic_hotel));
+                itemizedLayer.addItem(createMarkerItem(psc, R.drawable.ic_piscina));
+                itemizedLayer.addItem(createMarkerItem(wl, R.drawable.ic_cultural));
+                itemizedLayer.addItem(createMarkerItem(pm, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(pn, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(uh, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(km, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(el, R.drawable.ic_comedor));
+                itemizedLayer.addItem(createMarkerItem(la, R.drawable.ic_comedor));
+                break;
+            case 7:
+                itemizedLayer.addItem(createMarkerItem(d1, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d2, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d3, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d4, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d5, R.drawable.ic_docente));
+                itemizedLayer.addItem(createMarkerItem(d6, R.drawable.ic_current_pin));
+                itemizedLayer.addItem(createMarkerItem(ru, R.drawable.ic_comedor));
+                itemizedLayer.addItem(createMarkerItem(hu, R.drawable.ic_hotel));
+                itemizedLayer.addItem(createMarkerItem(psc, R.drawable.ic_piscina));
+                itemizedLayer.addItem(createMarkerItem(wl, R.drawable.ic_cultural));
+                itemizedLayer.addItem(createMarkerItem(pm, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(pn, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(uh, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(km, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(el, R.drawable.ic_comedor));
+                itemizedLayer.addItem(createMarkerItem(la, R.drawable.ic_comedor));
+                break;
+            default:
                 itemizedLayer.addItem(createMarkerItem(d1, R.drawable.ic_docente));
                 itemizedLayer.addItem(createMarkerItem(d2, R.drawable.ic_docente));
                 itemizedLayer.addItem(createMarkerItem(d3, R.drawable.ic_docente));
@@ -452,46 +588,10 @@ public class MapaActivity extends AppCompatActivity {
                 itemizedLayer.addItem(createMarkerItem(psc, R.drawable.ic_piscina));
                 itemizedLayer.addItem(createMarkerItem(wl, R.drawable.ic_cultural));
                 itemizedLayer.addItem(createMarkerItem(pm, R.drawable.ic_plaza));
-            break;
-            case 1:
-                d1 = new GeoPoint(22.987786, -82.465961);
-                itemizedLayer.addItem(createMarkerItem(d1, R.drawable.ic_docente));
-                break;
-            case 2:
-                d2 = new GeoPoint(22.988827, -82.466845);
-                itemizedLayer.addItem(createMarkerItem(d2, R.drawable.ic_docente));
-                break;
-            case 3:
-                d3 = new GeoPoint(22.987177, -82.467552);
-                itemizedLayer.addItem(createMarkerItem(d3, R.drawable.ic_docente));
-                break;
-            case 4:
-                d4 = new GeoPoint(22.987462, -82.468712);
-                itemizedLayer.addItem(createMarkerItem(d4, R.drawable.ic_docente));
-                break;
-            case 5:
-                d5 = new GeoPoint(22.986148, -82.468168);
-                itemizedLayer.addItem(createMarkerItem(d5, R.drawable.ic_docente));
-                break;
-            case 6:
-                d6 = new GeoPoint(22.985533, -82.469204);
-                itemizedLayer.addItem(createMarkerItem(d6, R.drawable.ic_docente));
-                break;
-            case 7:
-                ru = new GeoPoint(22.987182, -82.462239);
-                itemizedLayer.addItem(createMarkerItem(ru, R.drawable.ic_comedor));
-                break;
-            case 8:
-                psc = new GeoPoint(22.9861436, -82.4651212);
-                itemizedLayer.addItem(createMarkerItem(psc, R.drawable.ic_piscina));
-                break;
-            case 9:
-                wl = new GeoPoint(22.983548, -82.465576);
-                itemizedLayer.addItem(createMarkerItem(wl, R.drawable.ic_cultural));
-                break;
-            case 10:
-                pm = new GeoPoint(22.987991, -82.466827);
-                itemizedLayer.addItem(createMarkerItem(pm, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(pn, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(uh, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(km, R.drawable.ic_plaza));
+                itemizedLayer.addItem(createMarkerItem(el, R.drawable.ic_comedor));
                 break;
         }
 
@@ -508,45 +608,48 @@ public class MapaActivity extends AppCompatActivity {
                     case 0:
                         showDialogDirection("Docente 1: Rubén Martínez Villena",R.mipmap.docente1);
                         break;
-
                     case 1:
                         showDialogDirection("Docente 2: Ernesto Che Guevara",R.mipmap.docente2);
                         break;
-
                     case 2:
                         showDialogDirection("Docente 3: José Martí Pérez",R.mipmap.docente3);
                         break;
                     case 3:
                         showDialogDirection("Docente 4: Camilo Cienfuegos Gorriarán",R.mipmap.docente4);
                         break;
-
                     case 4:
                         showDialogDirection("Docente 5: José Antonio Echeverría",R.mipmap.docente5);
                         break;
-
                     case 5:
                         showDialogDirection("Docente 6: Mariana Grajales Cuello",R.mipmap.docente6);
                         break;
                     case 6:
                         showDialogDirection("Restaurante Universitario",R.mipmap.comedor2);
                         break;
-
                     case 7:
                         showDialogDirection("Hotel Universitario",R.mipmap.hotel);
                         break;
-
                     case 8:
                         showDialogDirection("Piscina",R.mipmap.piscina);
                         break;
-
                     case 9:
                         showDialogDirection("Centro Cultural Wifredo Lam",R.mipmap.plaza_wl);
                         break;
-
                     case 10:
                         showDialogDirection("Plaza Mella",R.mipmap.plaza_mella);
                         break;
-
+                    case 11:
+                        showDialogDirection("Plaza Niemiyer",R.mipmap.plaza_niemieyer);
+                        break;
+                    case 12:
+                        showDialogDirection("Universidad de La Habana",R.mipmap.uh);
+                        break;
+                    case 13:
+                        showDialogDirection("Teatro Karl Marx",R.mipmap.teatro_k_m);
+                        break;
+                    case 15:
+                        showDialogDirection("La Cecilia",R.mipmap.la_cecilia);
+                        break;
                 }
 
 
@@ -563,7 +666,7 @@ public class MapaActivity extends AppCompatActivity {
 
     }
 
-    void loadMap(String areaFolder) {
+    void loadMap(String areaFolder,GeoPoint mapCenter) {
         //logUser("loading map");
 
         // Map events receiver
@@ -587,7 +690,7 @@ public class MapaActivity extends AppCompatActivity {
 
 
         // Map position
-        GeoPoint mapCenter = new GeoPoint(22.987991, -82.466827);
+        //GeoPoint mapCenter = new GeoPoint(22.987991, -82.466827);
         mapView.map().setMapPosition(mapCenter.getLatitude(), mapCenter.getLongitude(), 1 << 15);
         loadGraphStorage();
     }

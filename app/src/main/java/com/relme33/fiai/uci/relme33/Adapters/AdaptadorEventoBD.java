@@ -53,7 +53,7 @@ public class AdaptadorEventoBD extends BaseAdapter {
         }
 
         view_horas.setText(auxT);
-        view_autor.setText("Autores: "+ eventos.get(position).getAutor());
+        view_autor.setText("Authors: "+ eventos.get(position).getAutor());
         view_chair.setText("Chairs: " + eventos.get(position).getPerson());
 
         return vista;
