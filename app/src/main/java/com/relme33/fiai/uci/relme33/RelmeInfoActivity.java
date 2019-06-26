@@ -2,6 +2,8 @@ package com.relme33.fiai.uci.relme33;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -66,10 +68,15 @@ public class RelmeInfoActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.Mapa:
-                showDialogWait();
-                Intent intent7 = new Intent(getApplicationContext(),MapaActivity.class);
-                startActivity(intent7);
-                finish();
+                if(Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
+                    showDialogWait();
+                    Intent intent5 = new Intent(getApplicationContext(), MapaActivity.class);
+                    startActivity(intent5);
+                    finish();
+                }else{
+                    Toast.makeText(getApplicationContext(),"En esta versión de ANDROID no se abrirá el mapa. Disculpe las molestias",
+                            Toast.LENGTH_LONG).show();
+                }
                 break;
             case R.id.Contactos:
                 Intent intent5 = new Intent(getApplicationContext(),ContactosActivity.class);
@@ -106,5 +113,15 @@ public class RelmeInfoActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.link_programa_general:
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("https://easychair.org/smart-program/RELME33/")));
+                break;
+            case R.id.link_programa_academico:
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("https://clame-relme.org/sites/default/files/2019.06.19%20Programa%20gral-RELME%2033%20v3%20%28para%20publicar%29.pdf")));
+                break;
+        }
     }
 }

@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import static android.Manifest.permission.CALL_PHONE;
 
@@ -69,10 +70,15 @@ public class ContactosActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.Mapa:
-                showDialogWait();
-                Intent intent7 = new Intent(getApplicationContext(),MapaActivity.class);
-                startActivity(intent7);
-                finish();
+                if(Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
+                    showDialogWait();
+                    Intent intent5 = new Intent(getApplicationContext(), MapaActivity.class);
+                    startActivity(intent5);
+                    finish();
+                }else{
+                    Toast.makeText(getApplicationContext(),"En esta versión de ANDROID no se abrirá el mapa. Disculpe las molestias",
+                            Toast.LENGTH_LONG).show();
+                }
                 break;
             case R.id.Contactos:
                 break;

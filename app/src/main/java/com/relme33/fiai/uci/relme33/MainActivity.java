@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.net.Uri;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -69,10 +70,15 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.menu_mapa:
-                showDialogWait();
-                Intent intent5 = new Intent(getApplicationContext(),MapaActivity.class);
-                startActivity(intent5);
-                finish();
+                if(Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
+                    showDialogWait();
+                    Intent intent5 = new Intent(getApplicationContext(), MapaActivity.class);
+                    startActivity(intent5);
+                    finish();
+                }else{
+                    Toast.makeText(getApplicationContext(),"En esta versión de ANDROID no se abrirá el mapa. Disculpe las molestias",
+                            Toast.LENGTH_LONG).show();
+                }
                 break;
             case R.id.menu_contactos:
                 Intent intent6 = new Intent(getApplicationContext(),ContactosActivity.class);

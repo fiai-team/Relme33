@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.relme33.fiai.uci.relme33.fragments.ConferenciasEspecialesFragment;
 
@@ -69,10 +71,15 @@ public class ConferencistasActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.Mapa:
-                showDialogWait();
-                Intent intent7 = new Intent(getApplicationContext(),MapaActivity.class);
-                startActivity(intent7);
-                finish();
+                if(Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
+                    showDialogWait();
+                    Intent intent5 = new Intent(getApplicationContext(), MapaActivity.class);
+                    startActivity(intent5);
+                    finish();
+                }else{
+                    Toast.makeText(getApplicationContext(),"En esta versión de ANDROID no se abrirá el mapa. Disculpe las molestias",
+                            Toast.LENGTH_LONG).show();
+                }
                 break;
             case R.id.Contactos:
                 Intent intent5 = new Intent(getApplicationContext(),ContactosActivity.class);

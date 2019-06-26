@@ -117,4 +117,7 @@
     <string name="filtrar">Filtrar:</string>
     <string name="patrocinadores_cartel">Patrocinadores:</string>
     <string name="encabezado_programa_general">Programa General</string>
+
+    <string name="tex_programa_acade"><u>Programa Académico</u></string>
+    <string name="tex_programa_gener"><u>Programa General</u></string>
 </resources>

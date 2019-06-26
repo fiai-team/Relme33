@@ -35,6 +35,23 @@
                 style="@style/cajon_de_textos"
                 android:layout_marginStart="4dp"
                 />
+
+            <TextView
+                style="@style/links_programas"
+                android:text="@string/tex_programa_acade"
+                android:onClick="onClick"
+                android:id="@+id/link_programa_academico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/links_programas"
+                android:text="@string/tex_programa_gener"
+                android:onClick="onClick"
+                android:id="@+id/link_programa_general"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
             <LinearLayout
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_width="match_parent"
@@ -63,7 +80,7 @@
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
-
         </LinearLayout>
+
     </ScrollView>
 </LinearLayout>

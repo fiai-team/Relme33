@@ -592,6 +592,7 @@ public class MapaActivity extends AppCompatActivity {
                 itemizedLayer.addItem(createMarkerItem(uh, R.drawable.ic_plaza));
                 itemizedLayer.addItem(createMarkerItem(km, R.drawable.ic_plaza));
                 itemizedLayer.addItem(createMarkerItem(el, R.drawable.ic_comedor));
+                itemizedLayer.addItem(createMarkerItem(la, R.drawable.ic_comedor));
                 break;
         }
 
@@ -639,7 +640,7 @@ public class MapaActivity extends AppCompatActivity {
                         showDialogDirection("Plaza Mella",R.mipmap.plaza_mella);
                         break;
                     case 11:
-                        showDialogDirection("Plaza Niemiyer",R.mipmap.plaza_niemieyer);
+                        showDialogDirection("Plaza Niemeyer",R.mipmap.plaza_niemieyer);
                         break;
                     case 12:
                         showDialogDirection("Universidad de La Habana",R.mipmap.uh);

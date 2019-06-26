@@ -2,6 +2,7 @@ package com.relme33.fiai.uci.relme33;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class ProgramaGeneralActivity extends AppCompatActivity {
 
@@ -58,10 +60,15 @@ public class ProgramaGeneralActivity extends AppCompatActivity {
             case R.id.programa_general:
                 break;
             case R.id.Mapa:
-                showDialogWait();
-                Intent intent7 = new Intent(getApplicationContext(),MapaActivity.class);
-                startActivity(intent7);
-                finish();
+                if(Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
+                    showDialogWait();
+                    Intent intent5 = new Intent(getApplicationContext(), MapaActivity.class);
+                    startActivity(intent5);
+                    finish();
+                }else{
+                    Toast.makeText(getApplicationContext(),"En esta versión de ANDROID no se abrirá el mapa. Disculpe las molestias",
+                            Toast.LENGTH_LONG).show();
+                }
                 break;
             case R.id.Contactos:
                 Intent intent5 = new Intent(getApplicationContext(),ContactosActivity.class);
