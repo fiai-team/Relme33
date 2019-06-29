@@ -44,8 +44,13 @@
             style="@style/texto_titulo_programa"
             android:textAlignment="center"/>
         <TextView
+            android:id="@+id/textLicencias"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            style="@style/text_nombres_autores"/>
+            android:layout_height="wrap_content"
+            android:text="@string/licencia"
+            style="@style/links_programas"
+            android:textAlignment="center"
+            android:onClick="onClick"/>
+
     </LinearLayout>
 </RelativeLayout>

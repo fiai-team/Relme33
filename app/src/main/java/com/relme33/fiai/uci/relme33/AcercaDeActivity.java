@@ -22,5 +22,13 @@ public class AcercaDeActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.textLicencias:
+            Intent irLicencias = new Intent(getApplicationContext(),CreditosActivity.class);
+            startActivity(irLicencias);
+            finish();
+            break;
+
+        }
     }
 }

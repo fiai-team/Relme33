@@ -51,7 +51,7 @@
     <string name="sitio_uci">https://www.uci.cu</string>
     <string name="footer_icono"> ©2019 FIAI-UCI</string>
     <string name="version">Versión 1.06.2</string>
-    <string name="autores">Jefe de Proyecto\nYor Alex Remond Recio\nDesarrollo\nEddy Yoel Fresno Hernández\nSandra María Rodríguez Martín\nJaime Alan Gutiérrez Cruz</string>
+    <string name="autores">Jefe de Proyecto\nYor Alex Remond Recio\nDesarrollo\nEddy Yoel Fresno Hernández\nColaboradores\nSandra María Rodríguez Martín\nJaime Alan Gutiérrez Cruz\nLiset Beatriz Armas Aguila</string>
 
     <string name="name_persona_1">Dr.C. Miriam Nicado</string>
     <string name="name_persona_2">Dr.C. Gisela Montiel</string>
@@ -65,34 +65,24 @@
     <string name="section_format">Hello World from section: %1$d</string>
 
     <string name="titular_conferencias_especiales">Conferencias Especiales</string>
-    <string name="subtutular_conferencias_especiales">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
 
     <string name="titular_reportes_investigaciones">Reportes de Investigación</string>
-    <string name="subtutular_reportes_investigaciones">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
 
     <string name="titular_comunicaciones_breves">Comunicaciones Breves</string>
-    <string name="subtutular_comunicaciones_breves">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
 
     <string name="titular_talleres">Talleres</string>
-    <string name="subtutular_talleres">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
 
     <string name="titular_grupos_discusion">Grupos de discusión</string>
-    <string name="subtutular_grupos_discusion">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
 
     <string name="titular_mesa_redonda">Mesas Redondas</string>
-    <string name="subtutular_mesa_redonda">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
 
     <string name="titular_premios_clame">Premios CLAME</string>
-    <string name="subtutular_premios_clame">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
 
     <string name="titular_concurso_foto">Concurso Fotografía, Videos, Carteles y Posters</string>
-    <string name="subtutular_concurso_foto">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
 
     <string name="titular_presentaciones">Presentaciones de materiales y libros</string>
-    <string name="subtutular_presentaciones">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
 
     <string name="titular_cursos_cortos">Cursos Cortos</string>
-    <string name="subtutular_cursos_cortos">Example_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_hereExample_here</string>
 
     <string name="havana_string">La Habana, Cuba</string>
     <string name="texto_portada_principal">Reunión Latinoamericana de \nMatemática Educativa</string>
@@ -120,4 +110,7 @@
 
     <string name="tex_programa_acade"><u>Programa Académico</u></string>
     <string name="tex_programa_gener"><u>Programa General</u></string>
+
+    <string name="licencia"><u>LICENCIAS Y AUTORES</u></string>
+
 </resources>

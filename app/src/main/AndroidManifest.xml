@@ -48,7 +48,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MapaActivity" />
-        <activity android:name=".ProgramaGeneralActivity"></activity>
+        <activity android:name=".ProgramaGeneralActivity" />
+        <activity android:name=".CreditosActivity"></activity>
     </application>
 
 </manifest>
