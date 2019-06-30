@@ -16,16 +16,18 @@
         android:background="@color/colorAccent"
         android:orientation="vertical">
 
-
         <TextView
-            android:id="@+id/tvtitle"
+            android:id="@+id/tvDireccion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Dirección"
-            android:textColor="#FFFFFF"
-            android:textSize="20dp"
-            android:layout_gravity="center" />
+            android:gravity="left"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/blanco"
+            android:visibility="visible" />
 
     </LinearLayout>
 
@@ -46,18 +48,7 @@
         android:paddingRight="10dp"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvDireccion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:paddingBottom="10dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="5dp"
-            android:textSize="@dimen/_12sdp"
-            android:textColor="@android:color/black"
-            android:visibility="visible" />
+
     </LinearLayout>
 
 

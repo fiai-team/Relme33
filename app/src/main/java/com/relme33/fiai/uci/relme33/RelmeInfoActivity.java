@@ -116,11 +116,11 @@ public class RelmeInfoActivity extends AppCompatActivity {
         switch (view.getId()){
             case R.id.link_programa_general:
                 startActivity(new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("https://easychair.org/smart-program/RELME33/")));
+                        Uri.parse("https://clame-relme.org/sites/default/files/2019.06.19%20Programa%20gral-RELME%2033%20v3%20%28para%20publicar%29.pdf")));
                 break;
             case R.id.link_programa_academico:
                 startActivity(new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("https://clame-relme.org/sites/default/files/2019.06.19%20Programa%20gral-RELME%2033%20v3%20%28para%20publicar%29.pdf")));
+                        Uri.parse("https://easychair.org/smart-program/RELME33/")));
                 break;
         }
     }
