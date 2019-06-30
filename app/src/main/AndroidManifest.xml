@@ -49,7 +49,8 @@
         </activity>
         <activity android:name=".MapaActivity" />
         <activity android:name=".ProgramaGeneralActivity" />
-        <activity android:name=".CreditosActivity"></activity>
+        <activity android:name=".CreditosActivity" />
+        <activity android:name=".MapaAlternativoActivity"></activity>
     </application>
 
 </manifest>

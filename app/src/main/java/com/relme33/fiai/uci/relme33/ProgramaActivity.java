@@ -160,6 +160,114 @@ public class ProgramaActivity extends AppCompatActivity {
                 }
             });
         }else{
+            lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    TextView ubicacion = (TextView) view.findViewById(R.id.punto_mapa);
+                    String aux = ubicacion.getText().toString().substring(0,2);;
+                    switch (aux){
+                        case "D1":
+                            showDialogWait();
+                            Intent i1 = new Intent(ProgramaActivity.this,MapaAlternativoActivity.class);
+                            Bundle mibundle1 = new Bundle();
+                            mibundle1.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE1);
+                            i1.putExtras(mibundle1);
+                            startActivity(i1);
+                            finish();
+                            break;
+                        case "D2":
+                            showDialogWait();
+                            Intent i2 = new Intent(ProgramaActivity.this,MapaAlternativoActivity.class);
+                            Bundle mibundle2 = new Bundle();
+                            mibundle2.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE2);
+                            i2.putExtras(mibundle2);
+                            startActivity(i2);
+                            finish();
+                            break;
+                        case "D3":
+                            showDialogWait();
+                            Intent i3 = new Intent(ProgramaActivity.this,MapaAlternativoActivity.class);
+                            Bundle mibundle3 = new Bundle();
+                            mibundle3.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE3);
+                            i3.putExtras(mibundle3);
+                            startActivity(i3);
+                            finish();
+                            break;
+                        case "D4":
+                            showDialogWait();
+                            Intent i4 = new Intent(ProgramaActivity.this,MapaAlternativoActivity.class);
+                            Bundle mibundle4 = new Bundle();
+                            mibundle4.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE4);
+                            i4.putExtras(mibundle4);
+                            startActivity(i4);
+                            finish();
+                            break;
+                        case "D5":
+                            showDialogWait();
+                            Intent i5 = new Intent(ProgramaActivity.this,MapaAlternativoActivity.class);
+                            Bundle mibundle5 = new Bundle();
+                            mibundle5.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE5);
+                            i5.putExtras(mibundle5);
+                            startActivity(i5);
+                            finish();
+                            break;
+                        case "D6":
+                            showDialogWait();
+                            Intent i6 = new Intent(ProgramaActivity.this,MapaAlternativoActivity.class);
+                            Bundle mibundle6 = new Bundle();
+                            mibundle6.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_DOCENTE6);
+                            i6.putExtras(mibundle6);
+                            startActivity(i6);
+                            finish();
+                            break;
+                        case "UH":
+                            showDialogWait();
+                            Intent i7 = new Intent(ProgramaActivity.this,MapaAlternativoActivity.class);
+                            Bundle mibundle7 = new Bundle();
+                            mibundle7.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_UH);
+                            i7.putExtras(mibundle7);
+                            startActivity(i7);
+                            finish();
+                            break;
+                        case "TE":
+                            showDialogWait();
+                            Intent i8 = new Intent(ProgramaActivity.this,MapaAlternativoActivity.class);
+                            Bundle mibundle8 = new Bundle();
+                            mibundle8.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_KM);
+                            i8.putExtras(mibundle8);
+                            startActivity(i8);
+                            finish();
+                            break;
+                        case "EL":
+                            showDialogWait();
+                            Intent i9 = new Intent(ProgramaActivity.this,MapaAlternativoActivity.class);
+                            Bundle mibundle9 = new Bundle();
+                            mibundle9.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_EL);
+                            i9.putExtras(mibundle9);
+                            startActivity(i9);
+                            finish();
+                            break;
+                        case "LA":
+                            showDialogWait();
+                            Intent i10 = new Intent(ProgramaActivity.this,MapaAlternativoActivity.class);
+                            Bundle mibundle10 = new Bundle();
+                            mibundle10.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_LA);
+                            i10.putExtras(mibundle10);
+                            startActivity(i10);
+                            finish();
+                            break;
+                        case "La":
+                            showDialogWait();
+                            Intent i11 = new Intent(ProgramaActivity.this,MapaAlternativoActivity.class);
+                            Bundle mibundle11 = new Bundle();
+                            mibundle11.putInt(Utiles.KEY_PASS_MAPA_SHOW, Utiles.KEY_MAP_LAH);
+                            i11.putExtras(mibundle11);
+                            startActivity(i11);
+                            finish();
+                            break;
+                    }
+                }
+            });
             Toast.makeText(getApplicationContext(),"En esta versión de ANDROID no se abrirá el mapa. Disculpe las molestias",
                     Toast.LENGTH_LONG).show();
         }
@@ -247,7 +355,6 @@ public class ProgramaActivity extends AppCompatActivity {
         modalidades = (Spinner)findViewById(R.id.spiner_modalidad);
         modalidades.setAdapter(adapter2);
         modalidades.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
-
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(parent.getItemAtPosition(position).toString().compareTo("Todas las Modalidades")==0){
@@ -372,6 +479,9 @@ public class ProgramaActivity extends AppCompatActivity {
                     startActivity(intent5);
                     finish();
                 }else{
+                    Intent intentAlternativo = new Intent(getApplicationContext(), MapaAlternativoActivity.class);
+                    startActivity(intentAlternativo);
+                    finish();
                     Toast.makeText(getApplicationContext(),"En esta versión de ANDROID no se abrirá el mapa. Disculpe las molestias",
                             Toast.LENGTH_LONG).show();
                 }

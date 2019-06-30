@@ -76,6 +76,9 @@ public class ContactosActivity extends AppCompatActivity {
                     startActivity(intent5);
                     finish();
                 }else{
+                    Intent intentAlternativo = new Intent(getApplicationContext(), MapaAlternativoActivity.class);
+                    startActivity(intentAlternativo);
+                    finish();
                     Toast.makeText(getApplicationContext(),"En esta versión de ANDROID no se abrirá el mapa. Disculpe las molestias",
                             Toast.LENGTH_LONG).show();
                 }
